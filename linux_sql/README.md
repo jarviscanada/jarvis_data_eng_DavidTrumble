@@ -17,7 +17,8 @@ Use markdown code block for your quick-start commands
 # Implemenation
 Discuss how you implement the project.
 ## Architecture
-Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io website). Image must be saved to the `assets` directory.
+![cluster](https://user-images.githubusercontent.com/73845528/134256760-ee9a92a0-5bc9-4554-90ea-d9d79370a18b.jpg)
+
 
 ## Scripts
 Shell script description and usage (use markdown code block for script usage)
