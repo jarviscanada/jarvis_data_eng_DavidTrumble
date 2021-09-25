@@ -13,72 +13,75 @@
 
 
 
+-- DROP TABLE IF EXISTS host_info;
+-- DROP TABLE IF EXISTS host_usage;
+
+
 -- sample values   -- all fields are required (NOT NULL)
-id=1      #auto-increment
-hostname=spry-framework-236416.internal  #fully qualified hostname
-cpu_number=1
-cpu_architecture=x86_64
-cpu_model=Intel(R) Xeon(R) CPU @ 2.30GHz
-cpu_mhz=2300.000
-L2_cache=256     #in kB
-total_mem=601324 #in kB
-timestamp=2019-05-29 17:49:53 #Current time in UTC time zone
+-- id=1      #auto-increment
+-- hostname=spry-framework-236416.internal  #fully qualified hostname
+-- cpu_number=1
+-- cpu_architecture=x86_64
+-- cpu_model=Intel(R) Xeon(R) CPU @ 2.30GHz
+-- cpu_mhz=2300.000
+-- L2_cache=256     #in kB
+-- total_mem=601324 #in kB
+-- timestamp=2019-05-29 17:49:53 #Current time in UTC time zone
 
 
 -- 2. CREATE HOST_INFO TABLE IF IT DOES NOT EXIST
 -- DDL
-CREATE TABLE PUBLIC.host_info 
+CREATE TABLE [IF NOT EXISTS] PUBLIC.host_info 
   ( 
-	id               	SERIAL NOT NULL, 
+	id               	SERIAL NOT NULl, 
      	hostname         	VARCHAR NOT NULL, 
-     	cpu_number		DATATYPE NOT NULL,
+     	cpu_number		INTEGER(1) NOT NULL,
      	cpu_architecture 	VARCHAR NOT NULL,
 	cpu_model		VARCHAR NOT NULL,
-	cpu_mhz			NOT NULL,
-	L2_cache		NOT NULL,
-	total_mem		NOT NULL,
-	timestamp 		NOT NULL,
+	cpu_mhz			FLOAT(3) NOT NULL,
+	L2_cache		INTEGER NOT NULL,
+	total_mem		INTEGER NOT NULL,
+	"timestamp" 		TIMESTAMP NOT NULL,
 
-     -- primary key constraint
-     -- unique hostname constraint
+	PRIMARY KEY (id),
+	UNIQUE(hostname)
   );
 
 -- DML -- INSERT statement
-INSERT INTO host_info (id, hostname ...
-
-
-
-
-
+INSERT INTO host_info (id, hostname);
 
 
 -- sample values -- all fields are required (NOT NULL)
-timestamp=2019-05-29 16:53:28 #UTC time zone
-host_id=1                     #host id from `hosts` table
-memory_free= 256              #in MB
-cpu_idle=95                   #in percentage
-cpu_kernel=0                  #in percentage
-disk_io=0                     #number of disk I/O
-disk_available=31220          #in MB. root directory avaiable disk
+-- timestamp=2019-05-29 16:53:28 #UTC time zone
+-- host_id=1                     #host id from `hosts` table
+-- memory_free= 256              #in MB
+-- cpu_idle=95                   #in percentage
+-- cpu_kernel=0                  #in percentage
+-- disk_io=0                     #number of disk I/O
+-- disk_available=31220          #in MB. root directory avaiable disk
 
 
 
 -- 3. CREATE HOST_USAGE TABLE IF IT DOES NOT EXIST
 -- DDL
-CREATE TABLE PUBLIC.host_usage 
+CREATE TABLE [IF NOT EXISTS] PUBLIC.host_usage 
   ( 
      	"timestamp"    		TIMESTAMP NOT NULL, 
      	host_id        		SERIAL NOT NULL,
-	memory_free		NOT NULL,
-	cpu_idle		NOT NULL,
-	cpu_kernel		NOT NULL,
-	disk_io			NOT NULL,
-	disk_available 		NOT NULL,
+	memory_free		INTEGER NOT NULL,
+	cpu_idle		INTEGER NOT NULL,
+	cpu_kernel		INTEGER NOT NULL,
+	disk_io			INTEGER NOT NULL,
+	disk_available 		INTEGER NOT NULL,
 
      -- add foreign key constraint
+	CONSTRAINT fk_host_id FOREIGN KEY(host_id) REFERENCES host_info(id)
   ); 
 
 
 -- DML
 -- INSERT statement
-INSERT INTO host_usage ("timestamp", host_id, ...
+INSERT INTO host_usage ("timestamp", host_id,);
+
+
+
