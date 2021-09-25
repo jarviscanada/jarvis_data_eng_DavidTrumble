@@ -58,4 +58,22 @@ start|stop)
 	echo 'Commands: start|stop|create'
 	exit 1
 	;;
-esac 
+esac
+
+	#check container is running
+	docker ps -f name=jrvs-psql
+
+	#install psql CLI client
+	sudo yum install -y postgresql
+
+	#set password for default user 'posgres'
+	export PGPASSWORD='password'
+
+	#Connect to psql instance using psql REPL
+	psql -h localhost -U postgres -d postgres -W
+
+	#show all databases
+	postgres=# \1
+
+
+
