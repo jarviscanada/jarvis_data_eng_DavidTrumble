@@ -27,7 +27,7 @@ echo ' '
 
 
 #lscpu
-lspu_out=$(lscpu)
+lscpu_out=$(lscpu)
 
 
 #hostname
@@ -38,36 +38,45 @@ echo ' '
 
 
 #cpu number
-echo "cpu_number"
-cpu_number=$(echo "$lspu_out" | head -4 | tail -1 | awk '{print $2}')
+echo "cpu number"
+cpu_number=$(echo "$lscpu_out" | head -4 | tail -1 | awk '{print $2}' | xargs)
 echo "$cpu_number"
 echo ' '
 
 
 #cpu architect
-echo "cpu_architect"
-cpu_architecture=$(echo "$lspu_out" | head -1 | awk '{print $2}')
+echo "cpu architect"
+cpu_architecture=$(echo "$lscpu_out" | head -1 | awk '{print $2}' | xargs)
 echo "$cpu_architecture"
 echo ' '
 
-echo "cpu_model"
-cpu_model=$(echo "$lscpu_out"  | egrep "^Model" | awk '{print $2}')
+
+echo "cpu model"
+cpu_model=$(echo "$lscpu_out" | egrep "^Model" | tail -1 | awk '{print $3,$4,$5,$6,$7}' | xargs)
 echo "$cpu_model"
 echo ' '
 
+
 echo "cpu_mhz"
+cpu_mhz=$(echo "$lscpu_out" | tail -10 | head -1 | awk '{print $3}' | xargs)
+echo "$cpu_mhz"
 echo ' '
 
+
 echo "l2_cache"
+cpu_mhz=$(echo "$lscpu_out" | tail -4 | head -1 | awk '{print $3}' | xargs)
+echo "$cpu_mhz"
 echo ' '
+
 
 echo "total_mem"
 echo ' '
 
-echo "timestamp"
-echo ' '
+
+#echo "timestamp"
+#echo ' '
 
 
 
 
-#exit $?
+exit $?
