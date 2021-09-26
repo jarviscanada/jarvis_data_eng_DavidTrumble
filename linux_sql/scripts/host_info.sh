@@ -68,8 +68,15 @@ cpu_mhz=$(echo "$lscpu_out" | tail -4 | head -1 | awk '{print $3}' | xargs)
 echo "$cpu_mhz"
 echo ' '
 
+lcpu_mhz=$(echo "$lscpu_out" | tail -4 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
+lld_mhz=$(echo "$lscpu_out" | tail -6 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs) 
+lli_mhz=$(echo "$lscpu_out" | tail -5 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs) 
+l3_mhz=$(echo "$lscpu_out" | tail -3 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
+
 
 echo "total_mem"
+total_mem=$(($l3_mhz + $lli_mhz + $lld_mhz + $lcpu_mhz))
+echo "$total_mem"
 echo ' '
 
 
@@ -77,6 +84,8 @@ echo ' '
 #echo ' '
 
 
-
-
 exit $?
+
+
+
+
