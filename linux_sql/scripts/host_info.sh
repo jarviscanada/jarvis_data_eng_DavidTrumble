@@ -2,7 +2,6 @@
 # File: host_info.sh
 
 
-
 #Setup and validate arguments
 psql_host=$1
 psql_port=$2
@@ -14,10 +13,8 @@ psql_password=$5
 
 #of arguments
 echo ' '
-echo ' '
 echo 'number of arguments'
 echo $#
-echo ' '
 
 
 #Check # of args
@@ -31,57 +28,43 @@ lscpu_out=$(lscpu)
 
 
 #hostname
-echo "hostname"
 hostname=$(hostname -f)
-echo $hostname
-echo ' '
 
 
 #cpu number
-echo "cpu number"
 cpu_number=$(echo "$lscpu_out" | head -4 | tail -1 | awk '{print $2}' | xargs)
-echo "$cpu_number"
-echo ' '
 
 
 #cpu architect
-echo "cpu architect"
 cpu_architecture=$(echo "$lscpu_out" | head -1 | awk '{print $2}' | xargs)
-echo "$cpu_architecture"
-echo ' '
 
 
-echo "cpu model"
+#cpu model
 cpu_model=$(echo "$lscpu_out" | egrep "^Model" | tail -1 | awk '{print $3,$4,$5,$6,$7}' | xargs)
-echo "$cpu_model"
-echo ' '
 
 
-echo "cpu_mhz"
+#cpu mhz
 cpu_mhz=$(echo "$lscpu_out" | tail -10 | head -1 | awk '{print $3}' | xargs)
-echo "$cpu_mhz"
-echo ' '
 
 
-echo "l2_cache"
+#cpu mhz no K
 cpu_mhz=$(echo "$lscpu_out" | tail -4 | head -1 | awk '{print $3}' | xargs)
-echo "$cpu_mhz"
-echo ' '
-
 lcpu_mhz=$(echo "$lscpu_out" | tail -4 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
 lld_mhz=$(echo "$lscpu_out" | tail -6 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs) 
 lli_mhz=$(echo "$lscpu_out" | tail -5 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs) 
 l3_mhz=$(echo "$lscpu_out" | tail -3 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
 
 
-echo "total_mem"
+#total mem 
 total_mem=$(($l3_mhz + $lli_mhz + $lld_mhz + $lcpu_mhz))
-echo "$total_mem"
-echo ' '
 
 
-#echo "timestamp"
-#echo ' '
+#timestamp y/m/d h/m/s - utc
+timestamp=$(date '+%Y/%m/%d %H:%M:%S')
+
+
+
+
 
 
 exit $?
