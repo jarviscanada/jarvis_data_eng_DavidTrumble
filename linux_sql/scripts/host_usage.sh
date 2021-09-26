@@ -2,19 +2,59 @@
 # file: host_usage.sh 
 
 
-
-#edit crontab jobs
-bash> crontab -e
-
-
-#crontab every minute to temp log file
-* * * * * bash /home/centos/dev/jrvs/bootcamp/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
+#pseudo code
+# parse server CPU and memory usage data using bash scripts
+# construct the INSERT statement. (hint: use a subquery to get id by hostname)
+# execute the INSERT statement
 
 
-#list crontab jobs
-crontab -l
+
+#Setup and validate arguments (again, don't copy comments)
+psql_host=$1
+psql_port=$2
+db_name=$3
+psql_user=$4
+psql_password=$5
 
 
-#validate your result from the psql instance
-#psql -h localhost -B postgres
-#> SELECT * FROM host_usage;
+#Check # of args
+if [ $# -ne 5 ] 
+  echo 'incorrect nubmer of arguments'
+  exit 1
+fi
+
+
+#Save machine statistics in MB and current machine hostname to variables
+vmstat_mb=$(vmstat --unit M)
+hostname=$(hostname -f)
+
+
+#Retrieve hardware specification variables
+#xargs is a trick to trim leading and trailing white spaces
+memory_free=$(echo "$vmstat_mb" | awk '{print $4}'| tail -n1 | xargs)
+cpu_idle=$(echo "$vmstat_mb" ...
+cpu_kernel=$(echo "$vmstat_mb" ...
+disk_io=$(vmstat -d | awk '{print $10}' ...
+disk_available=$(df -BM / ...
+
+
+#Current time in `2019-11-26 14:40:19` UTC format
+timestamp=$(vmstat -t | awk ...
+
+
+#Subquery to find matching id in host_info table
+host_id="(SELECT id FROM host_info WHERE hostname='$hostname')";
+
+
+#PSQL command: Inserts server usage data into host_usage table
+#Note: be careful with double and single quotes
+insert_stmt="INSERT INTO host_usage(timestamp, ...) VALUES('$timestamp', ..."
+
+
+#set up env var for pql cmd
+export PGPASSWORD=$psql_password 
+#Insert date into a database
+psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
+
+
+exit $?
