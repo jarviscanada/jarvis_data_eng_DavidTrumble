@@ -13,9 +13,11 @@ psql_password=$5
 
 
 #Check # of args
-#if [ $# -ne 5 ] then 
-#  exit 1
-#fi
+if [ $# -ne 5 ] 
+	then 
+ 	echo 'incorrect number of arguments'
+	 exit 1
+fi
 
 
 
@@ -51,19 +53,19 @@ total_mem=$(($l3_mhz + $lli_mhz + $lld_mhz + $lcpu_mhz))
 timestamp=$(date '+%Y/%m/%d %H:%M:%S')
 
 
-
 #insert statement
 insert_stmt="INSERT INTO host_info(hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, total_mem, timestamp) VALUES('$hostname', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '$toal_mem', '$timestamp'";
 
 
+#set up env var for pql cmd
+export PGPASSWORD=$psql_password
+
 
 #insert data into database
-#psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
+psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
 
 
 
 
 exit $?
-
-
 
