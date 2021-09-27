@@ -40,7 +40,7 @@ cpu_architecture=$(echo "$lscpu_out" | head -1 | awk '{print $2}' | xargs)
 
 
 #cpu model
-cpu_model=$(echo "$lscpu_out" | egrep "^Model" | tail -1 | awk '{print $3,$4,$5,$6,$7}' | xargs)
+cpu_model=$(echo "$lscpu_out" | egrep "^Model" |  tail -1 | awk '{$1=$2=""; print $0}' | xargs)
 
 
 #cpu mhz
@@ -61,10 +61,6 @@ total_mem=$(($l3_mhz + $lli_mhz + $lld_mhz + $lcpu_mhz))
 
 #timestamp y/m/d h/m/s - utc
 timestamp=$(date '+%Y/%m/%d %H:%M:%S')
-
-
-
-
 
 
 exit $?

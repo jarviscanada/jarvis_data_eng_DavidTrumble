@@ -22,50 +22,21 @@ psql_password=$5
 vmstat_mb=$(vmstat --unit M)
 hostname=$(hostname -f)
 
-echo ' '
-echo 'vmstat mb'
-echo "$vmstat_mb"
-echo ' '
 
 
 #Retrieve hardware specification variables
 memory_free=$(echo "$vmstat_mb" | awk '{print $4}'| tail -n1 | xargs)
 cpu_idle=$(echo "$vmstat_mb" | tail -1 | awk '{print $15'} | xargs)
+cpu_kernel=$(echo "$vmstat_mb" | tail -1 | awk '{print $14}' | xargs)
+disk_io=$(vmstat -d | tail -1 | awk '{print $10}' | xargs)
+disk_available=$(df -BM / | awk '{print $4}' | tail -1 | awk '{print $1=""; $0}' | xargs)
 
 
-cpu_kernel=$(echo "$vmstat_mb" | tail -1 | awk '{print $14'} | xargs)
-disk_io=$(vmstat -d | awk '{print $10}' )
-disk_io=$(vmstat -d)
-disk_available=$(df -BM)
-#disk_available=$(df -BM / )
-
-
-echo ' ' 
-echo 'cpu kernel'
-echo "$cpu_kernel"
-
-echo ' '
-echo 'disk io'
-#echo $disk_io
-
-echo ' '
-echo 'disk ioo'
-#echo $disk_ioo
-
-echo ' '
-echo 'disk available'
-#echo $disk_available
-
-#Current time in `2019-11-26 14:40:19` UTC format
-#timestamp=$(date '+%Y/%m/%d %H:%M:%S')
-
-echo ' '
-echo 'timestamp'
-#timestamp=$(vmstat -t)
-#echo $timestamp
-
-#timestamp=$(vmstat -t | awk)
+#timestamp
+timestamp=$(vmstat -t | awk '{print $18, $19}' | sed 's/^...//')
 
 
 
 exit $?
+
+
