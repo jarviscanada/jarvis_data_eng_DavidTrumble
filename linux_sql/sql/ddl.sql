@@ -5,8 +5,8 @@
 \c host_agent;
 
 
--- DROP EXISTING TABLES IF EXIST
--- DROP TABLE IF EXISTS host_info, host_usage CASCADE;
+--DROP EXISTING TABLES IF EXIST
+--DROP TABLE IF EXISTS host_info, host_usage CASCADE;
 
 
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
 	cpu_idle		INTEGER NOT NULL,
 	cpu_kernel		INTEGER NOT NULL,
 	disk_io			INTEGER NOT NULL,
-	disk_available 		INTEGER NOT NULL,
+	disk_available 		BIGINT NOT NULL,
 
      -- add foreign key constraint
 	CONSTRAINT fk_host_id FOREIGN KEY(host_id) REFERENCES host_info(id)

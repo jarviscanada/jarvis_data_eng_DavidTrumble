@@ -54,7 +54,7 @@ timestamp=$(date '+%Y/%m/%d %H:%M:%S')
 
 
 #insert statement
-insert_stmt="INSERT INTO host_info(hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, total_mem, timestamp) VALUES('$hostname', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '$toal_mem', '$timestamp'";
+insert_stmt="INSERT INTO host_info(hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, total_mem, timestamp)" "VALUES('$hostname', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '$total_mem', '$timestamp'";
 
 
 #set up env var for pql cmd
