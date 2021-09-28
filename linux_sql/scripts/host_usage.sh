@@ -31,19 +31,16 @@ memory_free=$(echo "$vmstat_mb" | awk '{print $4}'| tail -n1 | xargs)
 cpu_idle=$(echo "$vmstat_mb" | tail -1 | awk '{print $15'} | xargs)
 cpu_kernel=$(echo "$vmstat_mb" | tail -1 | awk '{print $14}' | xargs)
 disk_io=$(vmstat -d | tail -1 | awk '{print $10}' | xargs)
-disk_available=$(df -BM / | awk '{print $4}' | tail -1 | awk '{print $1=""; $0}' | xargs)
+disk_available=$(df -BM / | awk '{print $4}' | tail -1 | sed 's/..$//' | xargs)
+
 
 #timestamp
 timestamp=$(vmstat -t | awk '{print $18, $19}' | sed 's/^...//')
 
 
 
-#Subquery to find matching id in host_info table
-host_id="SELECT id FROM host_info";
-
-
 #Inserts server usage data into host_usage table
-#insert_stmt="INSERT INTO host_usage(timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available) VALUES('$timestamp', '$host_id', '$memory_free', '$cpu_idle', '$cpu_kernel', '$disk_io', '$disk_available')";
+insert_stmt="INSERT INTO host_usage(timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available) VALUES('$timestamp', (SELECT id FROM host_info WHERE hostname='$hostname'), '$memory_free', '$cpu_idle', '$cpu_kernel', '$disk_io', '$disk_available')";
 
 
 

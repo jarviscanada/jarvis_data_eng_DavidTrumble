@@ -37,24 +37,27 @@ cpu_architecture=$(echo "$lscpu_out" | head -1 | awk '{print $2}' | xargs)
 cpu_model=$(echo "$lscpu_out" | egrep "^Model" |  tail -1 | awk '{$1=$2=""; print $0}' | xargs)
 
 #cpu mhz
-cpu_mhz=$(echo "$lscpu_out" | tail -10 | head -1 | awk '{print $3}' | xargs)
+cpu_mhz=$(echo "$lscpu_out" | tail -10 | head -1 | awk '{print $3}' | xargs) 
+
+#l2_cache
+L2_cache=$(echo "$lscpu_out" | tail -4 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
 
 #cpu mhz no K
-cpu_mhz=$(echo "$lscpu_out" | tail -4 | head -1 | awk '{print $3}' | xargs)
-lcpu_mhz=$(echo "$lscpu_out" | tail -4 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
-lld_mhz=$(echo "$lscpu_out" | tail -6 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs) 
-lli_mhz=$(echo "$lscpu_out" | tail -5 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs) 
-l3_mhz=$(echo "$lscpu_out" | tail -3 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
+#lld_mhz=$(echo "$lscpu_out" | tail -6 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs) 
+#lli_mhz=$(echo "$lscpu_out" | tail -5 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs) 
+#l3_mhz=$(echo "$lscpu_out" | tail -3 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
 
 #total mem 
-total_mem=$(($l3_mhz + $lli_mhz + $lld_mhz + $lcpu_mhz))
+#total_mem=$(($l3_mhz + $lli_mhz + $lld_mhz + $L2_cache))
+total_mem=$(echo "$lscpu_out" | tail -3 | head -1 | awk '{print $3}' | sed 's/.$//' | xargs)
+
 
 #timestamp y/m/d h/m/s - utc
 timestamp=$(date '+%Y/%m/%d %H:%M:%S')
 
 
 #insert statement
-insert_stmt="INSERT INTO host_info(hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, total_mem, timestamp)" "VALUES('$hostname', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '$total_mem', '$timestamp'";
+insert_stmt="INSERT INTO host_info(hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, L2_cache, total_mem, timestamp) VALUES('$hostname', '$cpu_number', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '$L2_cache', '$total_mem', '$timestamp')";
 
 
 #set up env var for pql cmd
@@ -63,8 +66,6 @@ export PGPASSWORD=$psql_password
 
 #insert data into database
 psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
-
-
 
 
 exit $?
