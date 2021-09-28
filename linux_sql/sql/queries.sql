@@ -3,22 +3,12 @@
 
 
 -- TODO - GROUP HOSTS BY HARDWARE INFO
--- 	group hosts by cpu number 
--- 	sort by their memory size in descending order(w/in each cpu_number group)
-
--- 		sample output
--- 		cpu_number,host_id,total_mem
-
--- 		1,1,2048
--- 		1,5,1568
--- 		1,9,1024
--- 		2,4,4088
--- 		2,6,1024
-
-
--- SELECT cpu_number, host_id, total_mem
--- FROM host_info
-
+SELECT 
+	cpu_number, host_id, total_mem 
+FROM 
+	host_info 
+ORDER_BY
+	cpu_number, total_mem DESC;
 
 
 
