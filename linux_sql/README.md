@@ -1,9 +1,8 @@
 # Introduction
-This product uses google cloud platform(Compute Engine) to initialize a virtual machine. 
-	Within the virtual machine we provision a docker instance.
-	The docker instance is then provisioned with postgres and psql data.
-	Data inserted and retrieved from postgres details hardware specifications for that instance. 
-
+This product uses google cloud platform(Compute Engine) to initialize a virtual machine.
+Within the virtual machine we provision a docker instance.
+Docker instance is then provisioned with postgres and psql data.
+Data inserted and retrieved from postgres details hardware specifications for that instance.
 Some technologies used in this project were; regex, bash, docker, git, postgres, virtual machine and google cloud platform.
 
 # Quick Start
@@ -101,29 +100,52 @@ DIAGRAM
 Shell script description and usage (use markdown code block for script usage)
 - psql_docker.sh
 ```
+As a developer, I would like to design two tables to persist hardware specifications data and resource usage data into the psql instance to perform data analytics.
 
+As a developer, I would like to create a `ddl.sql` script will automate the database initialization to eliminate all manual process.
 ```
 - host_info.sh
 ```
-
+As a developer, I would like to write a monitoring agent program using Bash scripts. This program will be installed on each server to collect both hardware specification data and resource usage data, and then persist data into a psql instance. Therefore, the program can be installed on each server and collect data automatically.
 ```
 - host_usage.sh
 ```
+`host_info.sh`: The script collects hardware specification data and then insert the data to the psql instance. You can assume that hardware specifications are static, so the script will be executed only once. 
 
+`host_usage`: The script collects server usage data and then insert the data into the psql database. The script will be executed every minute using Linux `crontab` (you don't have to deal with this in this ticket)
 ```
 - crontab
 ```
-
+should be executed every minute, so it collects data continuously.
 ```
 - queries.sql (describe what business problem you are trying to resolve)
+```
+```
 
 ## Database Modeling
 Describe the schema of each table using markdown table syntax (do not put any sql code)
 - `host_info`
-
-
+```
+	id             	
+     	hostname         	
+     	cpu_number		
+     	cpu_architecture 	
+	cpu_model		
+	cpu_mhz			
+	L2_cache		
+	total_mem		
+	timestamp 
+```
 - `host_usage`
-
+```
+	timestamp 
+	host_id
+	memory_free 
+	cpu_idle
+	cpu_kernel 
+	disk_io
+	disk_available 
+```
 
 # Test
 - Testing docker with CLI tool.
@@ -186,7 +208,6 @@ Executed date/time operations with chrontab to automate data updates.
 
 # Improvements
 Write at least three things you want to improve 
-e.g. 
 - handle hardware update 
 - blah
 - blah
