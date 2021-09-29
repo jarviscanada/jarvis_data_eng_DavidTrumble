@@ -95,26 +95,21 @@ bash> crontab -e
 ## Architecture
 ![cluster](https://user-images.githubusercontent.com/73845528/135342282-35a0a44d-a3e4-44a3-9bed-333153e32eed.jpg)
 
-
 ## Scripts
 #### psql_docker.sh
-
-- Tables to persist host machine information, specification data and resource usage data into a psql instance for data analytics in performance.
-- Data definitions; through script, that automates the database initialization and eliminates all manual processes.
+- Creates data tables that persist host machine information into a psql instance for data analytics in performance.
 
 #### host_info.sh
-- The script collects hardware specification data and then insert the data to the psql instance. You can assume that hardware specifications are static, so the script will be executed only once. 
+- Collects hardware specification data, then inserts that data into a psql database. 
 
 #### host_usage.sh
-
-- The script collects server usage data and then insert the data into the psql database. The script will be executed every minute using Linux `crontab` (you don't have to deal with this in this ticket)
+- Collects server usage data, then inserts the data into a psql database. 
 
 #### crontab
-
-- should be executed every minute, so it collects data continuously.
+- Automates the database initialization and eliminates all manual processes; set to be executed every minute.
 
 #### queries.sql (describe what business problem you are trying to resolve)
-- hi
+- Designed to assist in: planning for future recourses, recognize server failures and monitor memory uses over various processes.
 
 ## Database Modeling
 Describe the schema of each table using markdown table syntax (do not put any sql code)
@@ -191,7 +186,6 @@ postgres=# \c host_agent;
 SELECT * FROM host_info;
 SELECT * FROM host_usage;
 ```
-
 
 
 # Deployment
