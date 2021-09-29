@@ -126,11 +126,62 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 
 
 # Test
-How did you test your bash scripts and SQL queries? What was the result?
+- Testing docker with CLI tool.
+```
+./psql_docker.sh create start stop
+```
+- Testing psql with CLI and psql CLI tool.
+```
+# connect to the psql instance
+psql -h localhost -U postgres -W
+
+# list all database
+postgres=# \l
+
+# create a database
+postgres=# CREATE DATABASE host_agent;
+
+# connect to the new database;
+postgres=# \c host_agent;
+```
+
+- Testing ddl(data definition language) with psql CLI tool.
+```
+# connect to the psql instance
+psql -h localhost -U postgres -W
+
+# connect to database;
+postgres=# \c host_agent;
+
+# display tables;
+postgres=# \c host_agent;
+```
+- Testing dbm(database management) scripts
+```
+# execute scripts
+scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password
+scripts/host_info.sh psql_host psql_port db_name psql_user psql_password
+```
+
+- Testing psql Queries with psql CLI tool.
+```
+# connect to the psql instance
+psql -h localhost -U postgres -W
+
+# connect to database;
+postgres=# \c host_agent;
+
+#select table data
+SELECT * FROM host_info;
+SELECT * FROM host_usage;
+```
+
 
 
 # Deployment
-How did you deploy your app? (e.g. Github, crontab, docker)
+Deployed project through Github for source code control.
+Provisioned a docker container and postgres instance for data management.  
+Executed date/time operations with chrontab to automate data updates.
 
 
 # Improvements
