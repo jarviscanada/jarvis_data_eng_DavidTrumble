@@ -208,7 +208,7 @@ SELECT * FROM host_usage;
 
 
 # Improvements
-Write at least three things you want to improve 
-- handle hardware update 
-- blah
-- blah
+- google cloud and virtual machine
+- docker
+- date time creation, automation and querying\
+contrab, psql and bash
