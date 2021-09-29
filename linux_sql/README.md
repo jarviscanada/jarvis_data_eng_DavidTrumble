@@ -97,29 +97,24 @@ bash> crontab -e
 
 
 ## Scripts
-- psql_docker.sh
-```
-As a developer, I would like to design two tables to persist hardware specifications data and resource usage data into the psql instance to perform data analytics.
+#### psql_docker.sh
 
-As a developer, I would like to create a `ddl.sql` script will automate the database initialization to eliminate all manual process.
-```
-- host_info.sh
-```
-As a developer, I would like to write a monitoring agent program using Bash scripts. This program will be installed on each server to collect both hardware specification data and resource usage data, and then persist data into a psql instance. Therefore, the program can be installed on each server and collect data automatically.
-```
-- host_usage.sh
-```
-`host_info.sh`: The script collects hardware specification data and then insert the data to the psql instance. You can assume that hardware specifications are static, so the script will be executed only once. 
+- Tables to persist host machine information, specification data and resource usage data into a psql instance for data analytics in performance.
+- Data definitions; through script, that automates the database initialization and eliminates all manual processes.
 
-`host_usage`: The script collects server usage data and then insert the data into the psql database. The script will be executed every minute using Linux `crontab` (you don't have to deal with this in this ticket)
-```
-- crontab
-```
-should be executed every minute, so it collects data continuously.
-```
-- queries.sql (describe what business problem you are trying to resolve)
-```
-```
+#### host_info.sh
+- The script collects hardware specification data and then insert the data to the psql instance. You can assume that hardware specifications are static, so the script will be executed only once. 
+
+#### host_usage.sh
+
+- The script collects server usage data and then insert the data into the psql database. The script will be executed every minute using Linux `crontab` (you don't have to deal with this in this ticket)
+
+#### crontab
+
+- should be executed every minute, so it collects data continuously.
+
+#### queries.sql (describe what business problem you are trying to resolve)
+- hi
 
 ## Database Modeling
 Describe the schema of each table using markdown table syntax (do not put any sql code)
