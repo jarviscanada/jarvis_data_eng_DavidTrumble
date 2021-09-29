@@ -201,8 +201,8 @@ SELECT * FROM host_usage;
 
 
 # Deployment
-- Deployed project through Github for source code control.\
-- Provisioned a docker container and postgres instance for data management.\
+- Deployed project through Github for source code control.
+- Provisioned a docker container and postgres instance for data management.
 - Executed date/time operations with chrontab to automate data updates.
 
 
