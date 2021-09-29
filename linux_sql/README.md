@@ -28,9 +28,7 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_info
 	PRIMARY KEY (id),
 	UNIQUE(hostname)
   );
-```
--- 3. CREATE HOST_USAGE TABLE IF IT DOES NOT EXIST
-```
+
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage 
   ( 
      	"timestamp"    		TIMESTAMP NOT NULL, 
@@ -41,7 +39,6 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
 	disk_io			INTEGER NOT NULL,
 	disk_available 		INTEGER NOT NULL,
 
-     -- add foreign key constraint
 	CONSTRAINT fk_host_id FOREIGN KEY(host_id) REFERENCES host_info(id)
   ); 
   ```
