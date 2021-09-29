@@ -121,7 +121,7 @@ PK	id
      	cpu_architecture 	
 	cpu_model		
 	cpu_mhz			
-	L2_cache: 			
+	L2_cache	
 	total_mem		
 	timestamp 
 ```
@@ -129,8 +129,8 @@ PK	id
 - Collects server usage data
 ```
 PK	timestamp	
-FK	host_id:	
-	memory_free:    
+FK	host_id	
+	memory_free  
 	cpu_idle
 	cpu_kernel 
 	disk_io
