@@ -1,8 +1,8 @@
 # Introduction
-This product uses google cloud platform(Compute Engine) to initialize a virtual machine.
-Within the virtual machine we provision a docker instance.
-Docker instance is then provisioned with postgres and psql data.
-Data inserted and retrieved from postgres details hardware specifications for that instance.
+This product uses google cloud platform(Compute Engine) to initialize a virtual machine.\
+Within the virtual machine we provision a docker instance.\
+A postgres instance is then provisioned on docker.\
+Data is inserted and retrieved from postgres which details hardware specifications.\
 Some technologies used in this project were; regex, bash, docker, git, postgres, virtual machine and google cloud platform.
 
 # Quick Start
