@@ -12,7 +12,7 @@ Use markdown code block for your quick-start commands
 ./psql_docker.sh start stop create
 
 - Create tables using ddl.sql
-
+```
 CREATE TABLE IF NOT EXISTS PUBLIC.host_info 
   ( 
 	id               	SERIAL NOT NULl, 
@@ -28,8 +28,9 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_info
 	PRIMARY KEY (id),
 	UNIQUE(hostname)
   );
-
+```
 -- 3. CREATE HOST_USAGE TABLE IF IT DOES NOT EXIST
+```
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage 
   ( 
      	"timestamp"    		TIMESTAMP NOT NULL, 
@@ -43,10 +44,10 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
      -- add foreign key constraint
 	CONSTRAINT fk_host_id FOREIGN KEY(host_id) REFERENCES host_info(id)
   ); 
-  
+  ```
 
 - Insert hardware specs data into the DB using host_info.sh
-
+```
 insert_stmt="INSERT INTO host_info(hostname, 
 				cpu_number, 
 				cpu_architecture, 
@@ -63,9 +64,10 @@ insert_stmt="INSERT INTO host_info(hostname,
 				'$L2_cache', 
 				'$total_mem', 
 				'$timestamp')";
-
+```
 
 - Insert hardware usage data into the DB using host_usage.sh
+```
 insert_stmt="INSERT INTO host_usage(timestamp, 
 				    host_id, 
 				    memory_free, 
@@ -80,15 +82,16 @@ insert_stmt="INSERT INTO host_usage(timestamp,
 				    '$cpu_kernel', 
 				    '$disk_io', 
 				    '$disk_available')";
-
+```
 
 - Crontab setup
+```
 # edit crontab jobs
 bash> crontab -e
 
 # set to every minute
 * * * * * bash /home/centos/dev/jarviscanada/jarvis_data_eng_DavidTrumble/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
-
+```
 
 
 # Implemenation
