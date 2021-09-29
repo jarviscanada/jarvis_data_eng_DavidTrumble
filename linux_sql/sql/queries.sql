@@ -11,20 +11,33 @@ ORDER_BY
 	cpu_number, total_mem DESC;
 
 -- TODO - AVERAGE MEMORY USAGE
-SELECT 
+SELECT
 	host_id, 
-	(select hostname from 	host_info), 
-	timestamp, 
-	(((select total_mem from host_info) - memory_free) / (select total_mem from host_info)::float *100)::int AS avg_used_mem_percentage 
+	(select hostname from host_info), 
+        date_trunc('hour', timestamp) + date_part('minute', timestamp)::int / 5 * interval '5 min' AS timestamp,
+	AVG(100 * ((SELECT total_mem from host_info) - memory_free) / (SELECT total_mem from host_info) AS "avg_used_mem_percentage"
 FROM 
-	host_usage;
+	host_usage
+GROUP BY
+	host_id,
+	hostname,
+	timestamp
+ORDER BY
+	host_id,
+	timestamp;	
 
 -- TODO DETECT HOST FAILURE
 SELECT 
 	host_id, 
-	date_trunc('hour', timestamp) + date_part('minute', timestamp)::int / 5 * interval '5 min' AS timestamp 
+	date_trunc('hour', timestamp) + date_part('minute', timestamp)::int / 5 * interval '5 min' AS timestamp,
+	COUNT(timestamp) AS num_data_points 
 FROM
-	host_usage 
+	host_usage
+GROUP BY
+	host_id,
+	timestamp,
+	num_data_points
+	
 ORDER BY 
-	timestamp, 
-	host_id;
+	host_id,
+	timestamp;
