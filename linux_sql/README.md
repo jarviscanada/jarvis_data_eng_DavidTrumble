@@ -86,7 +86,7 @@ insert_stmt="INSERT INTO host_usage(timestamp,
 bash> crontab -e
 
 # set to every minute
-* * * * * bash /home/centos/dev/jarviscanada/jarvis_data_eng_DavidTrumble/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
+* * * * * bash ~/dev/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
 ```
 
 
@@ -109,7 +109,7 @@ bash> crontab -e
 - Automates the database initialization and eliminates all manual processes; set to be executed every minute.
 
 #### queries.sql (describe what business problem you are trying to resolve)
-- Designed to assist in: planning for future recourses, recognize server failures and monitor memory uses over various processes.
+- Designed to assist in: planning for future resources, recognize server failures and monitor memory uses over various processes.
 
 ## Database Modeling
 #### `host_info`
