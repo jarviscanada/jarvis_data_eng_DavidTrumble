@@ -1,9 +1,9 @@
 # Introduction
-This product uses google cloud platform(Compute Engine) to initialize a virtual machine.\
-Within the virtual machine we provision a docker instance.\
-A postgres instance is then provisioned on docker.\
-Data is inserted and retrieved from postgres which details hardware specifications.\
-Some technologies used in this project were; regex, bash, docker, git, postgres, virtual machine and google cloud platform.
+- This product uses google cloud platform(Compute Engine) to initialize a virtual machine.\
+- Within the virtual machine we provision a docker instance.\
+- A postgres instance is then provisioned on docker.\
+- Data is inserted and retrieved from postgres which details hardware specifications.\
+- Some technologies used in this project were; regex, bash, docker, git, postgres, virtual machine and google cloud platform.
 
 # Quick Start
 - Start a psql instance using psql_docker.sh
@@ -201,9 +201,9 @@ SELECT * FROM host_usage;
 
 
 # Deployment
-Deployed project through Github for source code control.
-Provisioned a docker container and postgres instance for data management.  
-Executed date/time operations with chrontab to automate data updates.
+- Deployed project through Github for source code control.\
+- Provisioned a docker container and postgres instance for data management.\
+- Executed date/time operations with chrontab to automate data updates.
 
 
 # Improvements
