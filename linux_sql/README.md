@@ -209,9 +209,9 @@ SELECT * FROM host_usage;
 
 # Improvements
 - Google Cloud and Virtual Machine\
-this and that this and that
+this and that this and that\
 - Docker\
-this and that this and that
+this and that this and that\
 - Date and Timestamp\ 
 creation, automation and querying\
-contrab, psql and bash
+contrab, psql and bash\
