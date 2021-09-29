@@ -3,7 +3,7 @@
 - Within the virtual machine we provision a docker instance.
 - A postgres instance is then provisioned on docker.
 - Data is inserted and retrieved from postgres which details hardware specifications.
-- Some technologies used in this project were; regex, bash, docker, git, postgres, virtual machine and google cloud platform.
+- Technologies used in this project were; regex, bash, docker, git, postgres, centos, xfce, virtual machine and google cloud platform.
 
 # Quick Start
 - Start a psql instance using psql_docker.sh
@@ -100,10 +100,10 @@ bash> crontab -e
 - Creates data tables that persist host machine information into a psql instance for data analytics in performance.
 
 #### host_info.sh
-- Collects hardware specification data, then inserts that data into a psql database. 
+- Inserts the data collected from curront hardware specification data into a psql database. 
 
 #### host_usage.sh
-- Collects server usage data, then inserts the data into a psql database. 
+- Inserts the data collected from current server usage into a psql database. 
 
 #### crontab
 - Automates the database initialization and eliminates all manual processes; set to be executed every minute.
@@ -112,28 +112,29 @@ bash> crontab -e
 - Designed to assist in: planning for future recourses, recognize server failures and monitor memory uses over various processes.
 
 ## Database Modeling
-Describe the schema of each table using markdown table syntax (do not put any sql code)
-- `host_info`
+#### `host_info`
+- Collects hardware specification data
 ```
-	id             	
+PK	id             	
      	hostname         	
      	cpu_number		
      	cpu_architecture 	
 	cpu_model		
 	cpu_mhz			
-	L2_cache		
+	L2_cache: 			
 	total_mem		
 	timestamp 
 ```
-- `host_usage`
+#### `host_usage`
+- Collects server usage data
 ```
-	timestamp 
-	host_id
-	memory_free 
+PK	timestamp	
+FK	host_id:	
+	memory_free:    
 	cpu_idle
 	cpu_kernel 
 	disk_io
-	disk_available 
+	disk_available: remaining space available on a disk. 
 ```
 
 # Test
