@@ -94,7 +94,8 @@ bash> crontab -e
 Discuss how you implement the project.
 
 ## Architecture
-DIAGRAM
+![cluster](https://user-images.githubusercontent.com/73845528/135342282-35a0a44d-a3e4-44a3-9bed-333153e32eed.jpg)
+
 
 ## Scripts
 Shell script description and usage (use markdown code block for script usage)
