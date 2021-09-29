@@ -7,10 +7,10 @@ This product uses google cloud platform(Compute Engine) to initialize a virtual 
 Some technologies used in this project were; regex, bash, docker, git, postgres, virtual machine and google cloud platform.
 
 # Quick Start
-Use markdown code block for your quick-start commands
 - Start a psql instance using psql_docker.sh
+```
 ./psql_docker.sh start stop create
-
+```
 - Create tables using ddl.sql
 ```
 CREATE TABLE IF NOT EXISTS PUBLIC.host_info 
@@ -98,22 +98,26 @@ bash> crontab -e
 Discuss how you implement the project.
 
 ## Architecture
-Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io website). Image must be saved to the `assets` directory.
+DIAGRAM
 
 ## Scripts
 Shell script description and usage (use markdown code block for script usage)
 - psql_docker.sh
+```
 
-
+```
 - host_info.sh
+```
 
-
+```
 - host_usage.sh
+```
 
-
+```
 - crontab
+```
 
-
+```
 - queries.sql (describe what business problem you are trying to resolve)
 
 ## Database Modeling
