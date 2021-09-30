@@ -3,7 +3,7 @@
 - Within the virtual machine we provision a docker instance.
 - A postgres instance is then provisioned on docker.
 - Data is inserted and retrieved from postgres which details hardware specifications.
-- Technologies used in this project were; regex, bash, docker, git, postgres, centos, xfce, virtual machine and google cloud platform.
+- Technologies used: regex, bash, docker, git, postgres, centos, xfce, virtual machine and google cloud platform.
 
 # Quick Start
 - Start a psql instance using psql_docker.sh
@@ -100,7 +100,7 @@ bash> crontab -e
 - Creates data tables that persist host machine information into a psql instance for data analytics in performance.
 
 #### host_info.sh
-- Inserts the data collected from curront hardware specification data into a psql database. 
+- Inserts the data collected from current hardware specification data into a psql database. 
 
 #### host_usage.sh
 - Inserts the data collected from current server usage into a psql database. 
@@ -113,7 +113,7 @@ bash> crontab -e
 
 ## Database Modeling
 #### `host_info`
-- Collects hardware specification data
+- Collects hardware specification data.
 ```
 PK	id             	
      	hostname         	
@@ -126,7 +126,7 @@ PK	id
 	timestamp 
 ```
 #### `host_usage`
-- Collects server usage data
+- Collects server usage data.
 ```
 PK	timestamp	
 FK	host_id	
@@ -168,7 +168,7 @@ postgres=# \c host_agent;
 # display tables;
 postgres=# \c host_agent;
 ```
-- Testing dbm(database management) scripts
+- Testing dbm(database management) scripts.
 ```
 # execute scripts
 scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password
