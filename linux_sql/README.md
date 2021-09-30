@@ -108,7 +108,7 @@ bash> crontab -e
 #### crontab
 - Automates the database initialization and eliminates all manual processes; set to be executed every minute.
 
-#### queries.sql (describe what business problem you are trying to resolve)
+#### queries.sql
 - Designed to assist in: planning for future resources, recognize server failures and monitor memory uses over various processes.
 
 ## Database Modeling
@@ -134,7 +134,7 @@ FK	host_id
 	cpu_idle
 	cpu_kernel 
 	disk_io
-	disk_available: remaining space available on a disk. 
+	disk_available
 ```
 
 # Test
@@ -196,11 +196,9 @@ SELECT * FROM host_usage;
 
 
 # Improvements
-- Google Cloud and Virtual Machine\
-this and that this and that
 
-- Docker\
-this and that this and that
-
-- Date and Timestamp\ 
-creation, automation and querying
+<ol>
+	<li><b>Docker:</b> Create a script that will automate queries, as routine operations should be automated.</li>
+	<li><b>Postgres:</b> Create a script that will populate views for queried results, saving data as views rather than new tables.</li>
+	<li><b>Crontab:</b> Create scripts that operate on a series of different intervals, as the current 1 minute interval may not provide a broad enough perspective.</li>
+</ol>
