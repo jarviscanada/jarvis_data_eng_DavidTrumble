@@ -1,22 +1,32 @@
 {
   "education": [
     {
-      "awards_achievements": [
-        "Scholarship",
-        "Dean's List (2015, 2016): Ut enim ad minim veniam",
-        "GPA: 3.8/4.0"
-      ],
-      "degree": "Bachelor of Applied Sciences",
-      "department": "Electrical and Computer Engineering",
-      "duration": "2012-2016",
-      "school_name": "XYZ university"
+      "awards_achievements": null,
+      "degree": "Diploma",
+      "department": "Computer Programming",
+      "duration": "2018-2021",
+      "school_name": "Seneca College"
     },
     {
       "awards_achievements": null,
-      "degree": "Master of Engineering",
-      "department": "Electrical and Computer Engineering",
-      "duration": "2016-2018",
-      "school_name": "XYZ university"
+      "degree": "Certificate",
+      "department": "Audio Engineering",
+      "duration": "2014-2015",
+      "school_name": "Recording Arts Canada"
+    },
+    {
+      "awards_achievements": null,
+      "degree": "Certificate",
+      "department": "General Arts",
+      "duration": "2011-2012",
+      "school_name": "Seneca College"
+    },
+    {
+      "awards_achievements": null,
+      "degree": "Incomplete",
+      "department": "Business Administration - Marketing",
+      "duration": "2009-2011",
+      "school_name": "Seneca College"
     }
   ],
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_DavidTrumble",
@@ -100,37 +110,81 @@
     {
       "company": "Jarvis",
       "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
-      "duration": "2020-present",
+      "duration": "2021-present",
       "title": "Software Developer"
     },
     {
-      "company": "XYZ Company",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
-      "duration": "2019",
-      "title": "Tutor"
+      "company": "Freelance",
+      "description": "lsalfjlkd sldjfksdaf lsadkfjlaks saldfkj sadfl skdf asldkfjsaf Describe job.",
+      "duration": "Jul. 2021 - Sep. 2021",
+      "title": "Full-Stack Developer"
+    },
+    {
+      "company": "Freelance",
+      "description": "Describe job falskdjfl sladkfjl alsdkfjlaskdj asldkfj lasdjflksdf.",
+      "duration": "Oct. 2020 - Jan. 2021",
+      "title": "WordPress Developer"
+    },
+    {
+      "company": "The Noize Faktory",
+      "description": "Describe job. jlaskjdfj alskdjflk sjdf jsldkf jsdkf lksdjf",
+      "duration": "2014 - 2019",
+      "title": "Program Coordinator \u0026 Audio Engineer"
+    },
+    {
+      "company": "Captial One",
+      "description": "Describe job. lkjasd f lsdkjf las dflsakd fjlskdf slakdfj dksajf kdsajf ",
+      "duration": "2008 - 2009, 2012 - 2013",
+      "title": "Account Manager \u0026 Arrears Account Specialist"
     }
   ],
   "skills": {
     "competent": [
-      "Donec",
-      "fermentum",
-      "Donec",
-      "fermentum",
-      "Donec"
+      "Java",
+      "SQL Developer",
+      "Node.js",
+      "Postgres",
+      "Heroku",
+      "Excel",
+      "PuTTY/FileZilla/WinSCP/Matrix"
     ],
     "familiar": [
-      "Donec",
-      "fermentum",
-      "fermentum",
-      "fermentum",
-      "fermentum"
+      "Vue",
+      "Angular",
+      "React",
+      "Handlebars",
+      "Sequalize",
+      "bcrypt",
+      "WordPress",
+      "PHP",
+      "Python",
+      "JUCE",
+      "Arduino",
+      "Control Language",
+      "MongoDB",
+      "SSH/SCP/SFTP",
+      "Windows/Powershell",
+      "XAMPP",
+      "Riverbed",
+      "Ruby on Rails",
+      "UML",
+      "Rational Rose",
+      "StarUML",
+      "Sketch"
     ],
     "proficient": [
-      "Java",
+      "C/C++",
       "Linux/Bash",
       "RDBMS/SQL",
       "Agile/Scrum",
-      "Git"
+      "Git",
+      "HTML",
+      "CSS",
+      "BootStrap",
+      "JavaScript",
+      "IBM i-series/AS400",
+      "Slack",
+      "Notion"
     ]
   },
   "summary": "David Trumble Summary"

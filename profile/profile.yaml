@@ -12,25 +12,51 @@ summary: David Trumble Summary
 skills:
   # At least 5 skills
   proficient:
-    - Java
+    - C/C++
     - Linux/Bash
     - RDBMS/SQL
     - Agile/Scrum
     - Git
+    - HTML 
+    - CSS
+    - BootStrap
+    - JavaScript
+    - IBM i-series/AS400 
+    - Slack 
+    - Notion 
   # At least 5 skills
   competent:
-    - Donec
-    - fermentum
-    - Donec
-    - fermentum
-    - Donec
+    - Java
+    - SQL Developer
+    - Node.js 
+    - Postgres
+    - Heroku
+    - Excel 
+    - PuTTY/FileZilla/WinSCP/Matrix 
   # At least 5 skills
   familiar:
-    - Donec
-    - fermentum
-    - fermentum
-    - fermentum
-    - fermentum
+    - Vue 
+    - Angular
+    - React 
+    - Handlebars 
+    - Sequalize
+    - bcrypt
+    - WordPress 
+    - PHP
+    - Python
+    - JUCE 
+    - Arduino 
+    - Control Language
+    - MongoDB
+    - SSH/SCP/SFTP
+    - Windows/Powershell 
+    - XAMPP 
+    - Riverbed 
+    - Ruby on Rails 
+    - UML 
+    - Rational Rose 
+    - StarUML 
+    - Sketch 
 
 # List of Jarvis projects
 jarvis_projects:
@@ -81,30 +107,48 @@ professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
   - title: "Software Developer"
     company: "Jarvis"
-    duration: "2020-present"
+    duration: "2021-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
-  - title: "Tutor"
-    company: "XYZ Company"
-    duration: "2019"
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+  - title: "Full-Stack Developer"
+    company: "Freelance"
+    duration: "Jul. 2021 - Sep. 2021"
+    description: "lsalfjlkd sldjfksdaf lsadkfjlaks saldfkj sadfl skdf asldkfjsaf Describe job."
+  - title: "WordPress Developer"
+    company: "Freelance"
+    duration: "Oct. 2020 - Jan. 2021"
+    description: "Describe job falskdjfl sladkfjl alsdkfjlaskdj asldkfj lasdjflksdf."
+  - title: "Program Coordinator & Audio Engineer"
+    company: "The Noize Faktory"
+    duration: "2014 - 2019"
+    description: "Describe job. jlaskjdfj alskdjflk sjdf jsldkf jsdkf lksdjf"
+  - title: "Account Manager & Arrears Account Specialist"
+    company: "Captial One"
+    duration: "2008 - 2009, 2012 - 2013"
+    description: "Describe job. lkjasd f lsdkjf las dflsakd fjlskdf slakdfj dksajf kdsajf "
 
 #List of edcuation
 education: 
-  - school_name: "XYZ university"
-    duration: "2012-2016"
-    degree: "Bachelor of Applied Sciences"
-    department: "Electrical and Computer Engineering"
-    # optional
-    awards_achievements: 
-      - "Scholarship"
-      - "Dean's List (2015, 2016): Ut enim ad minim veniam"
-      - "GPA: 3.8/4.0"
-  - school_name: "XYZ university"
-    duration: "2016-2018"
-    degree: "Master of Engineering"
-    department: "Electrical and Computer Engineering"
-    awards_achievements: 
+  - school_name: "Seneca College"
+    duration: "2018-2021"
+    degree: "Diploma"
+    department: "Computer Programming"
+    awards_achievements:
+  - school_name: "Recording Arts Canada"
+    duration: "2014-2015"
+    degree: "Certificate"
+    department: "Audio Engineering"
+    awards_achievements:
+  - school_name: "Seneca College"
+    duration: "2011-2012"
+    degree: "Certificate"
+    department: "General Arts"
+    awards_achievements:
+  - school_name: "Seneca College"
+    duration: "2009-2011"
+    degree: "Incomplete"
+    department: "Business Administration - Marketing"
+    awards_achievements:
 
 #Optional section
 others:
