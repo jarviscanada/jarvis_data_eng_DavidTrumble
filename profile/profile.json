@@ -18,33 +18,48 @@
       "awards_achievements": null,
       "degree": "Certificate",
       "department": "General Arts",
-      "duration": "2011-2012",
+      "duration": "2012-2013",
       "school_name": "Seneca College"
     },
     {
       "awards_achievements": null,
       "degree": "Incomplete",
       "department": "Business Administration - Marketing",
-      "duration": "2009-2011",
+      "duration": "2010-2012",
       "school_name": "Seneca College"
     }
   ],
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_DavidTrumble",
   "highlighted_projects": [
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": "https://github.com/jarviscanada/jarvis_profile_builder",
-      "name": "Web app for resturant"
+      "description": "Virtual Studio Technology - Low Cut, High Cut and Parametric Equalizer with Frequency and Gain control.",
+      "git_url": "https://github.com/Plum-Tree-Garden/JUCE/tree/main/3BandEQ",
+      "name": "3-Band Equalizer"
     },
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": null,
-      "name": "Machine Learning"
+      "description": "Database storage, input and retrieval for Ministry of Health of Ontario vaccine counts.",
+      "git_url": "https://github.com/Plum-Tree-Garden/JAVA/tree/main/JDBC3",
+      "name": "Database Manager"
+    },
+    {
+      "description": "Helps users learn typing without looking at keys. Has onscreen keyboard display and highlights keys that are being pressed",
+      "git_url": "https://github.com/Plum-Tree-Garden/JAVA/tree/main/typingTutor",
+      "name": "Typing Tutor"
+    },
+    {
+      "description": "Creates a simulation between 2 AI opponents in a game of Rock, Paper, Scissors; then weighs the results to determine future decisions.",
+      "git_url": "https://github.com/Plum-Tree-Garden/cpp/tree/main/RockPaperScissors",
+      "name": "Weighted Learning - Rock Paper Scissors"
+    },
+    {
+      "description": "Receive user input then quantifies the Neutrons of Gravitational Force between 2 objects on Earth.",
+      "git_url": "https://github.com/Plum-Tree-Garden/cpp/tree/main/quantify/GravitationalForce",
+      "name": "Quantifying Gravitational Force"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
+      "description": "This project uses Google Cloud Platform(Compute Engine) to initialize a Virtual Machine. Within the Virtual Machine, an instance of Docker is provisioned. A Postgres instance is then provisioned on Docker. Data is inserted and retrieved from Postgres which details hardware specifications.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
@@ -56,86 +71,67 @@
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Springboot App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_anlytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
     }
   ],
   "name": "David Trumble",
   "others": [
     {
       "bullets": [
-        "Udacity Machine Learning (2019)"
+        "sldfjskdfjlksdf sdfs"
       ],
-      "title": "Certificates"
+      "title": "sldjflskdjfk"
     },
     {
       "bullets": [
-        "Winner"
+        "sdf sf sd fas"
       ],
-      "title": "Awards"
+      "title": "lsdjflkjs dsfsdf"
     },
     {
       "bullets": [
-        "Basketball player",
-        "Competitive gaming",
-        "Volunteer, ABC Food bank: Ut enim ad minim veniam"
+        "as dfsdf sfsdf",
+        "sdfsdasdf sd ",
+        "dfs ds"
       ],
-      "title": "Activities/Hobbies"
+      "title": "a sdfsdf"
     }
   ],
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
+      "description": "Serve as a member and lead of the software development team. Facilitate proper design and implementation of software. Provide detailed and innovative design; creating a seamless software experience.",
       "duration": "2021-present",
       "title": "Software Developer"
     },
     {
-      "company": "Freelance",
-      "description": "lsalfjlkd sldjfksdaf lsadkfjlaks saldfkj sadfl skdf asldkfjsaf Describe job.",
-      "duration": "Jul. 2021 - Sep. 2021",
+      "company": "Freelance - https://stormy-plateau-32984.herokuapp.com/",
+      "description": "Provided Front-End website architecture, user interactions on it's web page and end-to-end service. Also, developed back-end and managed server functionality; ensuring cross-platform optimization for mobile phones.",
+      "duration": "2021",
       "title": "Full-Stack Developer"
     },
     {
-      "company": "Freelance",
-      "description": "Describe job falskdjfl sladkfjl alsdkfjlaskdj asldkfj lasdjflksdf.",
-      "duration": "Oct. 2020 - Jan. 2021",
+      "company": "Freelance - https://coast.edwincheungdesign.com/",
+      "description": "Established and guided the websites architecture to ensure high-performance and availability; while creating extra utility functions via programming PHP, JavaScript, jQuery, HTML/CSS. Managed and formulated effective, responsive designs and converted them to a working theme as a customizable, open-source eCommerce platform.",
+      "duration": "2020",
       "title": "WordPress Developer"
     },
     {
       "company": "The Noize Faktory",
-      "description": "Describe job. jlaskjdfj alskdjflk sjdf jsldkf jsdkf lksdjf",
-      "duration": "2014 - 2019",
+      "description": "Prepared and documented all new client contracts, registrations and payments for new and on-going studio services. Instructed individual and group tutorials in: recording, production, theoretical acoustics, music composition, mixing and mastering.",
+      "duration": "2014-2019",
       "title": "Program Coordinator \u0026 Audio Engineer"
     },
     {
       "company": "Captial One",
-      "description": "Describe job. lkjasd f lsdkjf las dflsakd fjlskdf slakdfj dksajf kdsajf ",
-      "duration": "2008 - 2009, 2012 - 2013",
+      "description": "Presented, chartered and managed concerns with account holders and employed timely solutions. Determined the validity of client statements and advised client of file procedures; clearly documenting call results and consumer account communications.",
+      "duration": "2008-2009, 2012-2013",
       "title": "Account Manager \u0026 Arrears Account Specialist"
+    },
+    {
+      "company": "CanEAST Communications",
+      "description": "Developed product-relevant presentations for individuals, families, large groups and businesses. Directed sales inquiries, pricing and information as first point of contact for new and potential customers.",
+      "duration": "2009-2010",
+      "title": "Marketing Sales Representative"
     }
   ],
   "skills": {
@@ -146,7 +142,8 @@
       "Postgres",
       "Heroku",
       "Excel",
-      "PuTTY/FileZilla/WinSCP/Matrix"
+      "IBM i-series/AS400",
+      "PuTTY/FileZilla/WinSCP"
     ],
     "familiar": [
       "Vue",
@@ -182,10 +179,9 @@
       "CSS",
       "BootStrap",
       "JavaScript",
-      "IBM i-series/AS400",
       "Slack",
       "Notion"
     ]
   },
-  "summary": "David Trumble Summary"
+  "summary": "My name is David Trumble; a current Software Developer of Jarvis Consulting Group. I have a Diploma in Computer Programming as well as previous industry experience freelancing as both; Full-Stack and WordPress Developer. The software industry is a challenging yet rewarding job scope for myself, it is an opportunity to: have an outlet for my creativity, learn new things, collaborate with like-minded individuals and ultimately work towards something that makes a positive lasting impact."
 }
