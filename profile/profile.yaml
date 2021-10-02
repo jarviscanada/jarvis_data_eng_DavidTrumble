@@ -65,7 +65,7 @@ jarvis_projects:
     git_url: "/linux_sql"
     # Please read the project description guideline carefully. Make sure you follow the simplified SDLC pattern. (t.ly/NlXQ)
     # Please include the following keywords: CentOS, Bash/Shell, docker, RDBMS/SQL/Postgresql, crontab, data analytics
-    description: This project uses Google Cloud Platform(Compute Engine) to initialize a Virtual Machine. Within the Virtual Machine, an instance of Docker is provisioned. A Postgres instance is then provisioned on Docker. Data is inserted and retrieved from Postgres which details hardware specifications. 
+    description: This project uses Google Cloud Platform(Compute Engine) to initialize a Virtual Machine with CentOS. Within the Virtual Machine, an instance of Docker is provisioned. A Postgresql instance is then provisioned on Docker. Data is inserted via an automated Bash/Shell script and retrieved from the RDBMS with SQL; which details hardware specifications. 
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
@@ -156,15 +156,7 @@ education:
 #Optional section
 others:
     #category
-  - title: "sldjflskdjfk"
+  - title: "3rd Dan Kukkiwon"
     #list of items
     bullets:
-      - "sldfjskdfjlksdf sdfs"
-  - title: "lsdjflkjs dsfsdf"
-    bullets:
-      - "sdf sf sd fas"
-  - title: "a sdfsdf"
-    bullets:
-      - "as dfsdf sfsdf"
-      - "sdfsdasdf sd "
-      - "dfs ds"
+      - "Certificate"

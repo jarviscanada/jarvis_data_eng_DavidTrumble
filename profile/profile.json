@@ -59,7 +59,7 @@
   ],
   "jarvis_projects": [
     {
-      "description": "This project uses Google Cloud Platform(Compute Engine) to initialize a Virtual Machine. Within the Virtual Machine, an instance of Docker is provisioned. A Postgres instance is then provisioned on Docker. Data is inserted and retrieved from Postgres which details hardware specifications.",
+      "description": "This project uses Google Cloud Platform(Compute Engine) to initialize a Virtual Machine with CentOS. Within the Virtual Machine, an instance of Docker is provisioned. A Postgresql instance is then provisioned on Docker. Data is inserted via an automated Bash/Shell script and retrieved from the RDBMS with SQL; which details hardware specifications.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
@@ -77,23 +77,9 @@
   "others": [
     {
       "bullets": [
-        "sldfjskdfjlksdf sdfs"
+        "Certificate"
       ],
-      "title": "sldjflskdjfk"
-    },
-    {
-      "bullets": [
-        "sdf sf sd fas"
-      ],
-      "title": "lsdjflkjs dsfsdf"
-    },
-    {
-      "bullets": [
-        "as dfsdf sfsdf",
-        "sdfsdasdf sd ",
-        "dfs ds"
-      ],
-      "title": "a sdfsdf"
+      "title": "3rd Dan Kukkiwon"
     }
   ],
   "professional_experience": [
