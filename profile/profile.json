@@ -77,9 +77,23 @@
   "others": [
     {
       "bullets": [
-        "Certificate"
+        "3rd Dan Kukkiwon"
       ],
-      "title": "3rd Dan Kukkiwon"
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
+        "Winner"
+      ],
+      "title": "Awards"
+    },
+    {
+      "bullets": [
+        "Reading",
+        "Music",
+        "Exercise"
+      ],
+      "title": "Activities/Hobbies"
     }
   ],
   "professional_experience": [
@@ -91,7 +105,7 @@
     },
     {
       "company": "Freelance - https://stormy-plateau-32984.herokuapp.com/",
-      "description": "Provided Front-End website architecture, user interactions on it's web page and end-to-end service. Also, developed back-end and managed server functionality; ensuring cross-platform optimization for mobile phones.",
+      "description": "Provided Front-End website architecture, user interactions on it's web page and end-to-end service. Also, developed Back-End and managed server functionality; ensuring cross-platform optimization for mobile phones.",
       "duration": "2021",
       "title": "Full-Stack Developer"
     },
@@ -127,17 +141,13 @@
       "Node.js",
       "Postgres",
       "Heroku",
-      "Excel",
       "IBM i-series/AS400",
       "PuTTY/FileZilla/WinSCP"
     ],
     "familiar": [
-      "Vue",
-      "Angular",
       "React",
       "Handlebars",
       "Sequalize",
-      "bcrypt",
       "WordPress",
       "PHP",
       "Python",
@@ -149,7 +159,6 @@
       "Windows/Powershell",
       "XAMPP",
       "Riverbed",
-      "Ruby on Rails",
       "UML",
       "Rational Rose",
       "StarUML",
@@ -166,7 +175,8 @@
       "BootStrap",
       "JavaScript",
       "Slack",
-      "Notion"
+      "Notion",
+      "VIM"
     ]
   },
   "summary": "My name is David Trumble; a current Software Developer of Jarvis Consulting Group. I have a Diploma in Computer Programming as well as previous industry experience freelancing as both; Full-Stack and WordPress Developer. The software industry is a challenging yet rewarding job scope for myself, it is an opportunity to: have an outlet for my creativity, learn new things, collaborate with like-minded individuals and ultimately work towards something that makes a positive lasting impact."

@@ -23,7 +23,8 @@ skills:
     - BootStrap
     - JavaScript
     - Slack 
-    - Notion 
+    - Notion
+    - VIM 
   # At least 5 skills
   competent:
     - Java
@@ -31,17 +32,13 @@ skills:
     - Node.js 
     - Postgres
     - Heroku
-    - Excel 
     - IBM i-series/AS400 
     - PuTTY/FileZilla/WinSCP
   # At least 5 skills
   familiar:
-    - Vue 
-    - Angular
     - React 
     - Handlebars 
     - Sequalize
-    - bcrypt
     - WordPress 
     - PHP
     - Python
@@ -53,7 +50,6 @@ skills:
     - Windows/Powershell 
     - XAMPP 
     - Riverbed 
-    - Ruby on Rails 
     - UML 
     - Rational Rose 
     - StarUML 
@@ -111,7 +107,7 @@ professional_experience:
   - title: "Full-Stack Developer"
     company: "Freelance - https://stormy-plateau-32984.herokuapp.com/"
     duration: "2021"
-    description: "Provided Front-End website architecture, user interactions on it's web page and end-to-end service. Also, developed back-end and managed server functionality; ensuring cross-platform optimization for mobile phones."
+    description: "Provided Front-End website architecture, user interactions on it's web page and end-to-end service. Also, developed Back-End and managed server functionality; ensuring cross-platform optimization for mobile phones."
   - title: "WordPress Developer"
     company: "Freelance - https://coast.edwincheungdesign.com/"
     duration: "2020"
@@ -155,8 +151,16 @@ education:
 
 #Optional section
 others:
-    #category
-  - title: "3rd Dan Kukkiwon"
-    #list of items
-    bullets:
-      - "Certificate"
+     #category
+   - title: "Certificates"
+     #list of items
+     bullets:
+       - "3rd Dan Kukkiwon"
+   - title: "Awards"
+     bullets:
+       - "Winner"
+   - title: "Activities/Hobbies"
+     bullets:
+       - "Reading"
+       - "Music"
+       - "Exercise"
