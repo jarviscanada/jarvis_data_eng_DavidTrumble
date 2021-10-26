@@ -1,7 +1,3 @@
--- author: david trumble
--- file: queries.sql
-
-
 -- TODO - GROUP HOSTS BY HARDWARE INFO
 SELECT 
 	cpu_number, host_id, total_mem 
