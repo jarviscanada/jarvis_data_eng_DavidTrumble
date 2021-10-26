@@ -1,10 +1,6 @@
 -- 1. (optional) switch to `host_agent`
 \c host_agent;
 
---DROP EXISTING TABLES IF EXIST
---DROP TABLE IF EXISTS host_usage CASCADE;
---DROP TABLE IF EXISTS host_info, host_usage CASCADE;
-
 -- 2. CREATE HOST_INFO TABLE IF IT DOES NOT EXIST
 CREATE TABLE IF NOT EXISTS PUBLIC.host_info 
   ( 
@@ -36,6 +32,3 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
      -- add foreign key constraint
 	CONSTRAINT fk_host_id FOREIGN KEY(host_id) REFERENCES host_info(id)
   ); 
-
--- SELECT * FROM host_info;
--- SELECT * FROM host_usage;
