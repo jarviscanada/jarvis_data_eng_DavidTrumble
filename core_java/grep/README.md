@@ -7,7 +7,11 @@ How to use your apps?
 #Implemenation
 ## Pseudocode
 write `process` method pseudocode.
-
+The app takes three arguments:
+USAGE: regex rootPath outFile
+- regex: a special text string for describing a search pattern
+- rootPath: root directory path
+- outFile: output file name
 
 
 ## Performance Issue
