@@ -3,12 +3,52 @@ This grep application is a Java program to validate regex patterns. The applicat
 
 # Quick Start
 How to use your apps? 
+This project is an implementation of the Linux grep command using grep application in Java. There are two main implementations in this application as well as Maven package management and Dockerize. 
+
+Maven
+mvn clean package
+
+java -cp target/*.jar <class_file> <regex/pattern> <directory> <out_file>
+
+Docker
 
 #Implemenation
+
+JavaGrepImp.java
+
+        List<String> matchedLines = new ArrayList<>();
+        List<File> listedFiles = listFiles(getRootPath());
+
+        for(File f : listedFiles) {
+            List<String> linesRead = readLines(f);
+            for(String s : linesRead) {
+                if(containsPattern(s)) {
+                    matchedLines.add(s);
+                }
+            }
+        }
+        writeToFile(matchedLines);
+  
+JavaGrepLambdaImp
+
+        if (args.length != 3) {
+            throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
+        }
+
+        JavaGrepLambdaImp jglImp = new JavaGrepLambdaImp();
+        jglImp.setRegex(args[0]);
+        jglImp.setRootPath(args[1]);
+        jglImp.setOutFile(args[2]);
+
+        try {
+            jglImp.process();
+        } catch (Exception e) {
+            jglImp.logger.error(e.getMessage());
+        }
+
 ## Pseudocode
 write `process` method pseudocode.
-The app takes three arguments:
-USAGE: regex rootPath outFile
+The app takes three arguments: regex, rootPath and outFile.
 - regex: a special text string for describing a search pattern
 - rootPath: root directory path
 - outFile: output file name
