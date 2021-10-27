@@ -13,21 +13,17 @@ summary: "My name is David Trumble; a current Software Developer of Jarvis Consu
 skills:
   # At least 5 skills
   proficient:
+    - Java
     - C/C++
     - Linux/Bash
     - RDBMS/SQL
     - Agile/Scrum
     - Git
-    - HTML 
-    - CSS
-    - BootStrap
+    - HTML/CSS/BootStrap
     - JavaScript
-    - Slack 
-    - Notion
     - VIM 
   # At least 5 skills
   competent:
-    - Java
     - SQL Developer
     - Node.js 
     - Postgres
@@ -37,23 +33,13 @@ skills:
   # At least 5 skills
   familiar:
     - React 
-    - Handlebars 
-    - Sequalize
-    - WordPress 
     - PHP
     - Python
-    - JUCE 
     - Arduino 
-    - Control Language
     - MongoDB
     - SSH/SCP/SFTP
     - Windows/Powershell 
-    - XAMPP 
-    - Riverbed 
     - UML 
-    - Rational Rose 
-    - StarUML 
-    - Sketch 
 
 # List of Jarvis projects
 jarvis_projects:
@@ -81,19 +67,19 @@ highlighted_projects:
     #URL is optional
     git_url: "https://github.com/Plum-Tree-Garden/JUCE/tree/main/3BandEQ"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Virtual Studio Technology - Low Cut, High Cut and Parametric Equalizer with Frequency and Gain control.
+    description: "Virtual Studio Technology - Low Cut, High Cut and Parametric Equalizer with Frequency and Gain control. Technologies include: C++, STL and JUCE Framework."
   - name: "Database Manager"
     git_url: "https://github.com/Plum-Tree-Garden/JAVA/tree/main/JDBC3"
-    description: Database storage, input and retrieval for Ministry of Health of Ontario vaccine counts. 
+    description: "Database storage, input and retrieval for Ministry of Health of Ontario vaccine counts. Technologies include: Java, JavaFX, Swing, AWT, JDBC and XAMPP."
   - name: "Typing Tutor"
     git_url: "https://github.com/Plum-Tree-Garden/JAVA/tree/main/typingTutor"
-    description: Helps users learn typing without looking at keys. Has onscreen keyboard display and highlights keys that are being pressed 
+    description: "Helps users learn typing without looking at keys. Has onscreen keyboard display and highlights keys that are being pressed. Technologies include: Java, JavaFX, Swing, AWT, JDBC and XAMPP." 
   - name: "Weighted Learning - Rock Paper Scissors"
     git_url: "https://github.com/Plum-Tree-Garden/cpp/tree/main/RockPaperScissors"
-    description: Creates a simulation between 2 AI opponents in a game of Rock, Paper, Scissors; then weighs the results to determine future decisions. 
+    description: "Creates a simulation between 2 AI opponents in a game of Rock, Paper, Scissors; then weighs the results to determine future decisions. Technologies include: C++ and STL." 
   - name: "Quantifying Gravitational Force"
     git_url: "https://github.com/Plum-Tree-Garden/cpp/tree/main/quantify/GravitationalForce"
-    description: Receive user input then quantifies the Neutrons of Gravitational Force between 2 objects on Earth. 
+    description: "Receive user input then quantifies the Neutrons of Gravitational Force between 2 objects on Earth. Technologies include: C++ and STL."
 
 #List of professional experience
 # Please read the project description guideline carefully. Make sure you follow the simplified SDLC pattern. (t.ly/NlXQ)
@@ -103,15 +89,15 @@ professional_experience:
     company: "Jarvis"
     duration: "2021-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Serve as a member and lead of the software development team. Facilitate proper design and implementation of software. Provide detailed and innovative design; creating a seamless software experience."
+    description: "Serve as a member and lead of the software development team. Facilitate proper design and implementation of software. Provide detailed and innovative design; creating a seamless software experience. Technologies include: Bash, Postgresql, Docker, Java and JDBC."
   - title: "Full-Stack Developer"
     company: "Freelance - https://stormy-plateau-32984.herokuapp.com/"
     duration: "2021"
-    description: "Provided Front-End website architecture, user interactions on it's web page and end-to-end service. Also, developed Back-End and managed server functionality; ensuring cross-platform optimization for mobile phones."
+    description: "Provided Front-End website architecture, user interactions on it's web page and end-to-end service. Also, developed Back-End and managed server functionality; ensuring cross-platform optimization for mobile phones. Technologies include: HTML, CSS, BootStrap, Heroku and Express.js"
   - title: "WordPress Developer"
     company: "Freelance - https://coast.edwincheungdesign.com/"
     duration: "2020"
-    description: "Established and guided the websites architecture to ensure high-performance and availability; while creating extra utility functions via programming PHP, JavaScript, jQuery, HTML/CSS. Managed and formulated effective, responsive designs and converted them to a working theme as a customizable, open-source eCommerce platform." 
+    description: "Established and guided the websites architecture to ensure high-performance and availability; while creating extra utility functions. Managed and formulated effective, responsive designs and converted them to a working theme as a customizable, open-source eCommerce platform. Technologies include: WordPress, PHP, JavaScript, HTML and CSS." 
   - title: "Program Coordinator & Audio Engineer"
     company: "The Noize Faktory"
     duration: "2014-2019"
@@ -158,9 +144,9 @@ others:
        - "3rd Dan Kukkiwon"
    - title: "Awards"
      bullets:
-       - "Winner"
+       - "N/A"
    - title: "Activities/Hobbies"
      bullets:
-       - "Reading"
+       - "Read"
        - "Music"
        - "Exercise"
