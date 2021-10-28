@@ -22,7 +22,7 @@ docker run --rm -v <directory> -v <out_file> norivinay/grep <regex/pattern> <dir
 This project is an implementation of the Linux grep command using grep application in Java.
 
 
-- JavaGrepImp.java
+- JavaGrepImp
 
         List<String> matchedLines = new ArrayList<>();
         List<File> listedFiles = listFiles(getRootPath());
@@ -63,7 +63,7 @@ The process of the grep application is as follows:
 - Write lines to a file.
 
 ## Performance Issue
-(30-60 words) Discuss the memory issue and how would you fix it
+The memory issue with this application was that each List item is added to heap memory, causing OutOfMemoryError Exception. This was resolved by returning Java Stream API rather than List Objects. 
 
 # Test
 The application takes three arguments: regex, rootPath and outFile.
@@ -71,9 +71,7 @@ The application takes three arguments: regex, rootPath and outFile.
 - rootPath: root directory path.
 - outFile: output file name.
 
-Testing was done manually by creating files for output the test for certain cases that it could run against.
-
-The application was tested with a 5.21 MB text file stored in nested directories in the data/ folder. The application finds this file using a recursive search method and writes matched lines to a text file that gets stored in the out/ folder.
+The 3 arguments are manually tested against: nested directories, input text files and application output files. 
 
 # Deployment
 - pushing the image to Docker Hub.
@@ -82,6 +80,6 @@ The application was tested with a 5.21 MB text file stored in nested directories
 - Deployed project through Github for source code control.
 
 # Improvement
-1.
-2.
-3.
+1. expand search
+2. manage irrelevant file extensions
+3. handle failed search results
