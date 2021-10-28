@@ -73,9 +73,12 @@ The application takes three arguments: regex, rootPath and outFile.
 - outFile: output file name.
 
 # Deployment
-pushing the image to Docker Hub.
-Managed Maven Project 
-Provision Docker Container.
+- pushing the image to Docker Hub.
+- Managed Maven Project 
+- Provision Docker Container.
+- Deployed project through Github for source code control.
 
 # Improvement
-List three things you can improve in this project.
+1.
+2.
+3.
