@@ -2,7 +2,7 @@
 This grep application is a Java program to validate regex patterns. The application searches for a text pattern recursively in a given directory and outputs matched lines to a file. This project uses the Maven Standard Directory Layout following the industry standard. Managed with IntelliJ IDE and utilizes Java Regex API, Lambda and Stream API's. The grep app is then Dockerized so it's easier for the user to consume.
 
 # Quick Start
-This project is an implementation of the Linux grep command using grep application in Java. There are two main implementations in this application as well as Maven package management and Docker. 
+Create Maven Project and Provision Docker Container.
 
 Maven
 
@@ -21,6 +21,8 @@ docker run --rm -v <directory> -v <out_file> norivinay/grep <regex/pattern> <dir
 ```
 
 # Implemenation
+This project is an implementation of the Linux grep command using grep application in Java. There are two main implementations: JavaGrepImp and JavaGrepLambdaImp.
+
 
 JavaGrepImp.java
 
@@ -56,18 +58,21 @@ JavaGrepLambdaImp
 
         
 ## Pseudocode
-The application takes three arguments: regex, rootPath and outFile.
-        - regex: a special text string for describing a search pattern
-        - rootPath: root directory path
-        - outFile: output file name
-
+The process of the grep application is as follows:
+- Traverse a given directory and return all files.
+- Read a file and return all the lines.
+- Check if a line contains the regex pattern.
+- Write lines to a file.
 
 ## Performance Issue
 (30-60 words)
 Discuss the memory issue and how would you fix it
 
 # Test
-How did you test your application manually? (e.g. prepare sample data, run some test cases manually, compare result)
+The application takes three arguments: regex, rootPath and outFile.
+- regex: a special text string for describing a search pattern.
+- rootPath: root directory path.
+- outFile: output file name.
 
 # Deployment
 Created a dockerfile and built a new docker image locally. Then verified the image and ran the docker container. Finally, pushing the image to Docker Hub.
