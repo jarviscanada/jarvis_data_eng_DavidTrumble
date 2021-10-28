@@ -74,12 +74,11 @@ The application takes three arguments: regex, rootPath and outFile.
 The 3 arguments are manually tested against: nested directories, input text files and application output files. 
 
 # Deployment
-- pushing the image to Docker Hub.
-- Managed Maven Project 
-- Provision Docker Container.
-- Deployed project through Github for source code control.
+- Manage Maven Project and pom.xml dependencies.
+- Push Docker image to Docker hub.
+- Deploy project through Github for source code control.
 
 # Improvement
-1. expand search
-2. manage irrelevant file extensions
-3. handle failed search results
+1. The directory search can be modified and expanded. 
+2. Create choke points and manage irrelevant file extensions.
+3. Better handle failed search results and log descriptions.
