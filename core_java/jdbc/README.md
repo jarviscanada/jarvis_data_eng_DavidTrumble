@@ -7,13 +7,9 @@ ER diagram
 
 ## Design Patterns
 Discuss DAO and Repository design patterns (150-200 words)
-The Data Access Object (DAO) pattern is a structural pattern that allows us to isolate the application/business layer from the persistence layer (usually a relational database, but it could be any other persistence mechanism) using an abstract API.
-
+The Data Access Object (DAO) pattern is a structural pattern that allows us to isolate the application/business layer from the persistence layer using an abstract API.
 The functionality of this API is to hide from the application all the complexities involved in performing CRUD operations.
 This permits both layers to evolve separately without knowing anything about each other
-
-From a bird's eye view, it's clear to see that the Dao interface defines an abstract API that performs CRUD operations on objects of type T.
-Due to the high level of abstraction that the interface provides, it's easy to create a concrete, fine-grained implementation that works with User objects.
 first it is an abstraction of the data layer and second it is a way of centralising the handling of the domain objects.
 
 # Test
