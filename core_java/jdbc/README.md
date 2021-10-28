@@ -1,21 +1,9 @@
 # Introduction
-(50-100 words)
 What does this app do? 
- This project uses JDBC to establish a connection between java Application and a Postgres database running on a docker container using postgres image to implement CRUD operations on sales order information using DAO patterns.
- 
- This program implements Java Database Connectivity (JDBC) to interface with a PostgreSQL database using the built-in SQL libraries in Java 8. A database access object class connects to a local database to perform basic create, read, update and delete (CRUD) operations on the database.
+This project uses JDBC to establish a connection between java Application and a Postgres database running on a docker container using postgres image to implement CRUD operations on sales order information using DAO patterns. The DAO connects to a local database and performs: creation, reading, updating and deleting through CRUD operations.
 
-What technoglies your have used? (JDBC, PSQL, MVN, etc..)
-JDBC allows a connection between a Java application and an RDBMS. 
- JDBC and data access-designed patterns
- DBeaver client, IDE: IntelliJ, Docker, PostgreSQL and psql CLI tool
-
-  JDBC and set up a Maven project to practice JDBC by developing a Java projec
- CRUD is a very common data access pattern. It's an interface, so it can be applied to other data sources, such as file systems, NoSQL, REST APIs, etc
- exception handling in jdbc
- rdbms
- 
- Create Maven project . Use psql to create and populate new database. Populate ER diagram tool with DBeaver. JDBC driver and exception handling in jdbc.
+What technoglies your have used? 
+This project uses Maven Standart Directory Layout. The application uses a psql instance to create, populate and query a database. Also, this project populates an ER diagram with DBeaver. JDBC is used to handle errors and act as connection driver to the psql database. The entirety of the application is allocated on a Docker image. 
 
 # Implementaiton
 ## ER Diagram
@@ -36,10 +24,9 @@ first it is an abstraction of the data layer and second it is a way of centralis
 
 The idea with this pattern is to have a generic abstract way for the app to work with the data layer without being bother with if the implementation is towards a local database or towards an online API.
 
+DAO is a class or interfaces that CRUD an object in your project. In general, an object could be one row in the database table (e.g., a Customer). An object can also represent the result of your more complex query (e.g., Customer table join Order table).
+
 # Test
 How you test your app against the database? 
 (e.g. database setup, test data set up, query result)
-
-The database was created by pulling a PostgreSQL docker image and using it to create a database and tables from a set of provided .sql files. A connection manager initializes the connection to the database and a JDBCExecutor class file utilizes methods implemented in a DAO class file to demonstrate CRUD operations. The results of these operations can be verified using the psql command line tool to directly read from the database, or through a GUI-based program such as DBeaver.
-
-The PostgreSQL server created using Docker container was populated with the sample data using the sql scripts. Using JDBCExecutor.java, a connection was established with Postgres Server. The application uses CustomerDAO and OrderDAO to do CRUD operations using the sample data created using Customer and Order objects.
+A psql server and database was created in tandem with a Docker image on a Maven project to host relevant SQL and RDBMS data. Using JDBC to connect to the psql instance, the application DAO class files were tested to demonstrate CRUD operations. This was accomplished by querying the new RDBMS data using the psql command line tool.
