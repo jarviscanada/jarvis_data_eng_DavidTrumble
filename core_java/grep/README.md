@@ -2,8 +2,6 @@
 This grep application is a Java program to validate regex patterns. The application searches for a text pattern recursively in a given directory and outputs matched lines to a file. This project uses the Maven Standard Directory Layout following the industry standard. Managed with IntelliJ IDE and utilizes Java Regex API, Lambda and Stream API's. The grep app is then Dockerized so it's easier for the user to consume.
 
 # Quick Start
-Create Maven Project and Provision Docker Container.
-
 Maven
 
 ```
@@ -75,7 +73,9 @@ The application takes three arguments: regex, rootPath and outFile.
 - outFile: output file name.
 
 # Deployment
-Created a dockerfile and built a new docker image locally. Then verified the image and ran the docker container. Finally, pushing the image to Docker Hub.
+pushing the image to Docker Hub.
+Managed Maven Project 
+Provision Docker Container.
 
 # Improvement
 List three things you can improve in this project.
