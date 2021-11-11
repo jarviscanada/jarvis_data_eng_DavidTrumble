@@ -8,7 +8,11 @@ Technologies include: IntelliJ IDE, Twitter REST API, HTTP client, Maven, Java, 
 
 # Design
 ## UML diagram
-## explain each component(app/main, controller, service, DAO) (30-50 words each)
+C:\Users\Reign\Documents\twitterAppUML2
+## App/Main
+## Controller 
+## Service 
+## DAO
 ## Models
 Talk about tweet model
 ## Spring
@@ -29,6 +33,6 @@ docker push ${docker_user}/twitter
 ```
 
 # Improvements
-- Imporvement 1
-- Imporvement 2
-- Imporvement 3
+- Create document of available tweets to post.
+- Automate post script to tweet every 24 hours.
+- Automate post script via Google hosting service api gateway.
