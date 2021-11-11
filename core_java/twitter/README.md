@@ -8,7 +8,7 @@ Technologies include: IntelliJ IDE, Twitter REST API, HTTP client, Maven, Java, 
 
 # Design
 ## UML diagram
-<img src="/assets/twitterUML.png" alt="twitter uml"/>
+![twitter uml](/assets/twitterUML.png)
 
 
 ## App/Main
