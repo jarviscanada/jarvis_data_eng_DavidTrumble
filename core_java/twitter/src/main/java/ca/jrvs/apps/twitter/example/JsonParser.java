@@ -10,7 +10,6 @@ import java.io.IOException;
 
 public class JsonParser {
 
-    //JSON string is provided(you can copy and paste)
     public static final String companyStr = "{\n"
             + "   \"symbol\":\"AAPL\",\n"
             + "   \"companyName\":\"Apple Inc.\",\n"

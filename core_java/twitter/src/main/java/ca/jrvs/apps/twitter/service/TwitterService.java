@@ -5,16 +5,20 @@ import ca.jrvs.apps.twitter.dao.TwitterDao;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@org.springframework.stereotype.Service
 public class TwitterService implements Service {
 
     final Logger logger = LoggerFactory.getLogger(TwitterService.class);
 
     private CrdDao dao;
 
+    @Autowired
     public TwitterService(CrdDao dao) { this.dao = dao; }
 
     @Override
@@ -56,13 +60,11 @@ public class TwitterService implements Service {
             logger.info("text-body out of bounds");
             throw new IllegalArgumentException(
                     "max tweet range is 140 characters");
-        }
-        if (longitude > maxGeoAddress || longitude < minGeoAddress) {
+        } else if (longitude > maxGeoAddress || longitude < minGeoAddress) {
             logger.info("longitude out of bounds");
             throw new IllegalArgumentException(
                     "geo range is -90 to 90");
-        }
-        if (latitude > maxGeoAddress || latitude < minGeoAddress) {
+        } else if (latitude > maxGeoAddress || latitude < minGeoAddress) {
             logger.info("latitude out of bounds");
             throw new IllegalArgumentException(
                     "geo range is -90 to 90");
