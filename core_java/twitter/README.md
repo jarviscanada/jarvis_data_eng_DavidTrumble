@@ -34,7 +34,7 @@ CLI Application
 - This component initializes all components and their dependencies.
 ## Controller 
 Controller Layer
-- This layer interacts and parsers the user input CLI arguments.
+- This layer interacts and parses the user input CLI arguments.
 - Also, it calls the service layer and returns results.
 ## Service 
 Service Layer
@@ -83,7 +83,7 @@ Entities</br>
 
 
 ## Spring
-The dependencies of this application were managed using the Spring framework. Jaca Class annotation were used to signify Beans(created by 'main' method). Dependency injection processes were performed in which the objects define their dependencies only through constructor arguments. 
+The dependencies of this application were managed using the Spring framework. Java Class annotation was used to signify Beans(created by 'main' method). Dependency injection processes were performed in which the objects define their dependencies only through constructor arguments. 
 ```
     @Component: TwitterAppCLI, TwitterHttpHelper
     @Controller: TwitterController
@@ -105,12 +105,11 @@ Steps to dockerize app:
 ```
 docker_user=docker_id
 docker login
-mvn clean package
 docker build -t ${docker_user}/twitter .
 docker push ${docker_user}/twitter
 ```
 
 # Improvements
-- Create document of available tweets to post.
-- Automate post script to tweet every 24 hours.
+- Create a document to reedFile from; with a list of available tweets to post.
+- Automate post script to tweet every 24.
 - Automate post script via Google hosting service api gateway.
