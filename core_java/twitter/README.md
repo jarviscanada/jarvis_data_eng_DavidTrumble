@@ -47,7 +47,7 @@ Data Access Object or Data Access Layer (DAO/DAL)
 - The DAO layer saves, shows and deletes tweet(s).
 ## Models
 Twitter Model</br>
-- Tweets are known as “status updates” 
+- Tweets are known as “status updates”. 
 - The Tweet object has a long list of ‘root-level’ attributes that can also be the ‘parent’ object to several child objects. 
 - The JSON will be a mix of ‘root-level’ attributes and child objects (which are represented with the {} notation.
 ```
@@ -96,7 +96,7 @@ Integration Testing</br>
 
 
 Unit Testing</br>
-- Mockito framework was applied to test classes but not the dependencies. 
+- Mockito framework was applied to test classes. 
 - Mock/fake/dummy objects were created and tested by means of the dummy object return values.
 
 ## Deployment
