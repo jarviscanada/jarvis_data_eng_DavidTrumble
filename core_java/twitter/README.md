@@ -46,11 +46,42 @@ Data Access Object or Data Access Layer (DAO/DAL)
 - The data access layer handles models. 
 - The DAO layer saves, shows and deletes tweet(s).
 ## Models
-Tweet: Simplified version of the Twitter Tweet model
-Entities: Contains Hashtag and UserMention
-Hashtag: Shows hashtag text in a posted tweet
-UserMention: Shows users that have been mentioned in a posted tweet
-Coordinates: A list containing longitude and latitude coordinates representing the location of the tweet
+Twitter Model</br>
+- Tweets are known as “status updates” 
+- The Tweet object has a long list of ‘root-level’ attributes that can also be the ‘parent’ object to several child objects. 
+- The JSON will be a mix of ‘root-level’ attributes and child objects (which are represented with the {} notation.
+```
+{
+  "created_at" : "Fri Jun 26 17:32:16 +0000 2020",
+  "id" : 1276568976764686343,
+  "id_str" : "1276568976764686343",
+  "text" : "test post",
+  "entities" : {
+    "hashtags" : [ ],
+    "user_mentions" : [ ]
+  },
+  "coordinates" : {
+    "coordinates" : [ 79.0, 43.0 ],
+    "type" : "Point"
+  },
+  "retweet_count" : 0,
+  "favorite_count" : 0,
+  "favorited" : false,
+  "retweeted" : false
+}
+```
+
+Coordinates</br>
+- Represents the geographic location of this Tweet as reported by the user or client application. 
+- The inner coordinates array is formatted as geoJSON (longitude first, then latitude).
+
+
+Entities</br>
+- The entities object is a holder of arrays of other entity sub-objects such as hashtag and user_mentions.
+- hashtag: Represents hashtags which have been parsed out of the Tweet text.
+- user_mentions: Represents other Twitter users mentioned in the text of the Tweet.
+
+
 ## Spring
 - How you managed the dependencies using Spring?
 
