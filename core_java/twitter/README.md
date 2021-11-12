@@ -83,10 +83,21 @@ Entities</br>
 
 
 ## Spring
-- How you managed the dependencies using Spring?
-
+The dependencies of this application were managed using the Spring framework. Jaca Class annotation were used to signify Beans(created by 'main' method). Dependency injection processes were performed in which the objects define their dependencies only through constructor arguments. 
+```
+    @Component: TwitterAppCLI, TwitterHttpHelper
+    @Controller: TwitterController
+    @Service: TwitterService
+    @Repository: TwitterDAO
+```
 # Test
-How did you test you app using Junit and mockito?
+Integration Testing</br>
+- JUnit annotations were used to @Test: classes method execution order, expected result and actual result. 
+
+
+Unit Testing</br>
+- Mockito framework was applied to test classes but not the dependencies. 
+- Mock/fake/dummy objects were created and tested by means of the dummy object return values.
 
 ## Deployment
 Steps to dockerize app:
