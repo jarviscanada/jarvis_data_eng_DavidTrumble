@@ -15,7 +15,7 @@ Docker
 ```
 docker pull dttrumble/grep
 
-docker run --rm -v <directory> -v <out_file> norivinay/grep <regex/pattern> <directory> <out_file>
+docker run --rm -v <directory> -v <out_file> dttrumble/grep <regex/pattern> <directory> <out_file>
 ```
 
 # Implemenation
