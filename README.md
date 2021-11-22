@@ -8,7 +8,7 @@ My name is David Trumble; a current Software Developer of Jarvis Consulting Grou
 
 **Competent:** SQL Developer, Node.js, Postgres, Heroku, IBM i-series/AS400, PuTTY/FileZilla/WinSCP
 
-**Familiar:** React, PHP, Python, Arduino, MongoDB, SSH/SCP/SFTP, Windows/Powershell, UML
+**Familiar:** React, PHP, Python, R, Arduino, MongoDB, SSH/SCP/SFTP, Windows/Powershell, UML
 
 ## Jarvis Projects
 
@@ -19,17 +19,15 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_DavidTrumb
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_DavidTrumble/tree/master/core_java)]:
       
-  - Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
+  - Twitter App: The Java application uses a bottom-up approach that can CRUD(create, read and delete) tweets from the CLI via the Twitter REST API. A Java library is also implemented to process the Twitter API; as the Twitter API returns data in the form of JSON. Junit and Mockito were used as testing tools, IntelliJ was used as a IDE and source code control was performed through git. Also, Maven was used to package and manage dependencies in conjuction with Spring, then the application was Dockerized and pushed to Docker Hub for easier user consumption.
+  - JDBC App: This project uses JDBC to establish a connection between the java application and a Postgres database running on a docker container using postgres image to implement CRUD operations on sales order information using DAO patterns. The DAO connects to a local database and performs: creation, reading, updating and deleting through CRUD operations. This project uses Maven Standart Directory Layout. The application uses a psql instance to create, populate and query a database. Also, this project populates an ER diagram with DBeaver. JDBC is used to handle errors and act as connection driver to the psql database. The entirety of the application is allocated on a Docker image.
+  - Grep App: This application is a Java program to validate regex patterns. The application searches for a text pattern recursively in a given directory and outputs matched lines to a file. This project uses the Maven Standard Directory Layout following the industry standard. Managed with IntelliJ IDE and utilizes Java Regex API, Lambda and Stream API's. Also, SL4J as a logging framework for debug and error information. The grep app is then Dockerized so it's easier for the user to consume.
 
 
 ## Highlighted Projects
 **3-Band Equalizer** [[GitHub](https://github.com/Plum-Tree-Garden/JUCE/tree/main/3BandEQ)]: Virtual Studio Technology - Low Cut, High Cut and Parametric Equalizer with Frequency and Gain control. Technologies include: C++, STL and JUCE Framework.
 
-**Database Manager** [[GitHub](https://github.com/Plum-Tree-Garden/JAVA/tree/main/JDBC3)]: Database storage, input and retrieval for Ministry of Health of Ontario vaccine counts. Technologies include: Java, JavaFX, Swing, AWT, JDBC and XAMPP.
-
-**Typing Tutor** [[GitHub](https://github.com/Plum-Tree-Garden/JAVA/tree/main/typingTutor)]: Helps users learn typing without looking at keys. Has onscreen keyboard display and highlights keys that are being pressed. Technologies include: Java, JavaFX, Swing, AWT, JDBC and XAMPP.
+**Typing Tutor** [[GitHub](https://github.com/Plum-Tree-Garden/JAVA/tree/main/typingTutor)]: Helps users learn typing without looking at keys. Has on-screen keyboard display and highlights keys that are being pressed. Technologies include: Java, JavaFX, Swing, AWT, JDBC and XAMPP.
 
 **Weighted Learning - Rock Paper Scissors** [[GitHub](https://github.com/Plum-Tree-Garden/cpp/tree/main/RockPaperScissors)]: Creates a simulation between 2 AI opponents in a game of Rock, Paper, Scissors; then weighs the results to determine future decisions. Technologies include: C++ and STL.
 
@@ -38,7 +36,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_DavidTrumb
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2021-present)**: Serve as a member and lead of the software development team. Facilitate proper design and implementation of software. Provide detailed and innovative design; creating a seamless software experience. Technologies include: Bash, Postgresql, Docker, Java and JDBC.
+**Software Developer, Jarvis (2021-present)**: Serve as a member and lead of the software development team. Facilitate proper design and implementation of software. Provide detailed and innovative design; creating a seamless software experience. Technologies include: Bash, Postgresql, Docker, Java, JDBC, Git and Maven.
 
 **Full-Stack Developer, Freelance - https://stormy-plateau-32984.herokuapp.com/ (2021)**: Provided Front-End website architecture, user interactions on it's web page and end-to-end service. Also, developed Back-End and managed server functionality; ensuring cross-platform optimization for mobile phones. Technologies include: HTML, CSS, BootStrap, Heroku and Express.js
 
