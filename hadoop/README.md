@@ -1,6 +1,8 @@
 Table of contents
 * [Introduction](#Introduction)
-* include all first level titles
+* [Hadoop Cluster](#Hadoop Cluster)
+* [Hive Project](#Hive Project)
+* [Improvements](#Improvements)
 
 # Introduction
 - Purpose of this project (please see the project kick-off ticket)
