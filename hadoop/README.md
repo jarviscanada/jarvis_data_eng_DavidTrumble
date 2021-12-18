@@ -1,7 +1,7 @@
 Table of contents
 * [Introduction](#Introduction)
 * [Hadoop Cluster](#hadoop-cluster)
-* [Hive Project](#Hive Project)
+* [Hive Project](#hive-project)
 * [Improvements](#Improvements)
 
 
@@ -16,11 +16,10 @@ The purpose of this project was to perform data analytics and process big data u
 ![clusterDiagram](assets/cluster_architecture.png)
 
 
-## Master Worker / Master-Slave / Map-Reduce pattern.
-```
-Used for parallel processing and allows applications to perform simultaneous processing across multiple machines. </br> 
+## Master Worker / Master-Slave / Map-Reduce Pattern
+Used for parallel processing and allows applications to perform simultaneous processing across multiple machines. 
 Also, processes via a Master and multiple Workers. In this instance a three node Hadoop cluster is provisioned with GCP Dataproc service.
-```
+
 
 ### Master Node Hardware Specs
 ```
@@ -35,8 +34,7 @@ Also, processes via a Master and multiple Workers. In this instance a three node
 
 ### MapReduce
 
-**MapReduce** is a framework and processing component for Apache Hadoop that enables scalability across servers in a Hadoop cluster. 
-MapReduce refers to 2 separate tasks that Hadoop programs perform: Map Job and Reduce Job. </br> 
+**MapReduce** is a framework and processing component for Apache Hadoop that enables scalability across servers in a Hadoop cluster. MapReduce refers to 2 separate tasks that Hadoop programs perform: Map Job and Reduce Job. </br> 
 **Map Job:** takes a set of data and converts it into another set of data in which elements are put into key/value pairs (tuples). </br>
 **Reduce Job:** takes the output from a map as input and combines those data pairs/ tuples into a smaller set of pairs/ tuples. </br>
 
@@ -55,7 +53,7 @@ Apache Zeppelin a web-based notebook that offers interactive data analytics and 
 
 ### Hive and Hive-QL
 Apache Hive is a data warehouse software project built on top of Apache Hadoop for providing data query and analysis. 
-Hive gives an SQL-like interface to query data stored in various databases and file systems that integrate with Hadoop.
+Hive gives an SQL-type interface to query data stored in various databases and file systems that integrate with Hadoop.
 
 
 
@@ -68,9 +66,11 @@ Using partitioning enabled the ability to query a portion of the data; it provid
 
 ### Columnar Optimization
 
-columnar database stores data by columns rather than by rows, which makes it suitable for analytical query processing. 
-The reason for this being that data access patterns mostly involve selecting a few columns to perform aggregations, then using columnar storage will save disk space, reduce I/O when fetching data and improve query execution time.
+Columnar database stores data by columns rather than by rows, which makes it suitable for analytical query processing. 
+The reason for this being that data access patterns mostly involve selecting a few columns to perform aggregations. Then using columnar storage saves disk space, reduce the input/ output when fetching data as well as improve query execution time.
 
 
 # Improvements
-- at least three improvements
+1. Write all corresponding script used in hive for bash script/ spark.
+2. Increase the hardware specs/ performance for each Master and Worker Node.
+3. Further implement YARN to improve data processing via bucketing. 
