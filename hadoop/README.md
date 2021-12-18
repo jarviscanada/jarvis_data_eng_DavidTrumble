@@ -1,6 +1,6 @@
 Table of contents
 * [Introduction](#Introduction)
-* [Hadoop Cluster](#Hadoop Cluster)
+* [Hadoop Cluster](#hadoop-cluster)
 * [Hive Project](#Hive Project)
 * [Improvements](#Improvements)
 
@@ -13,12 +13,13 @@ The purpose of this project was to perform data analytics and process big data u
 
 
 ## Cluster Architecture Diagram
-![clusterDiagram](assets/cluster_architecture)
+![clusterDiagram](assets/cluster_architecture.png)
 
 
 ## Master Worker / Master-Slave / Map-Reduce pattern.
 ```
-Used for parallel processing and allows applications to perform simultaneous processing across multiple machines or processes via a Master and multiple Workers. In this instance a three node Hadoop cluster is provisioned with GCP Dataproc service.
+Used for parallel processing and allows applications to perform simultaneous processing across multiple machines. </br> 
+Also, processes via a Master and multiple Workers. In this instance a three node Hadoop cluster is provisioned with GCP Dataproc service.
 ```
 
 ### Master Node Hardware Specs
@@ -69,8 +70,6 @@ Using partitioning enabled the ability to query a portion of the data; it provid
 
 columnar database stores data by columns rather than by rows, which makes it suitable for analytical query processing. 
 The reason for this being that data access patterns mostly involve selecting a few columns to perform aggregations, then using columnar storage will save disk space, reduce I/O when fetching data and improve query execution time.
-
-
 
 
 # Improvements
