@@ -70,6 +70,13 @@ Columnar database stores data by columns rather than by rows, which makes it sui
 The reason for this being that data access patterns mostly involve selecting a few columns to perform aggregations. Then using columnar storage saves disk space, reduce the input/ output when fetching data as well as improve query execution time.
 
 
+### Full Page Captures
+
+
+![notebookFull](assets/notebook_fullpage.png)
+![notebookFullOutput](assets/notebook_fullpage_output.png)
+
+
 # Improvements
 1. Write all corresponding script used in hive for bash script/ spark.
 2. Increase the hardware specs/ performance for each Master and Worker Node.
