@@ -7,7 +7,6 @@ SELECT *
 FROM retail 
 limit 10;
 
-/*
 -- Q2: Check # of records
 SELECT COUNT(*) 
 FROM retail;
@@ -44,4 +43,3 @@ FROM retail;
 
 
 -- Q8: Calculate total revenue by YYYYMM 
-*/
