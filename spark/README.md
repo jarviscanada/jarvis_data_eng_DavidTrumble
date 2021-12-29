@@ -45,7 +45,9 @@ Country
 
 ## Architecture
 
+Microsoft Azure with Azure Databricks was integrated with Azure services to unify this projects analytics workloads. A cluster with a Master-Worker Relationship was used to Compute, Data was used to create a dataframe via a csv data file and Notebook was used to analyze the data file.
 
+![azureCluster](assets/azureCluster.png)
 
 ## Architecture Diagram
 ![dataAnalytics](assets/dataAnalytics.png)
