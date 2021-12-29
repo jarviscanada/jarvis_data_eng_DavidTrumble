@@ -18,7 +18,29 @@ The purpose of this project is to use Data Analytics and Wrangling with Scala, S
 Dataset and Notebook
 
 
+```
+Invoice
+StockCode
+Description
+Quantity
+Invoice Date
+Price
+Customer ID
+Country
+```
+1. Total Invoice Amount Distribution (Invoice Amount/ Remove Outliers)
+2. Monthly Placed and Canceled Orders
+3. Monthly Sales
+4. Monthly Sales Growth
+5. Monthly Active Users
+6. New and Existing Users
+7. Finding RFM
+8. RFM Segmentation
+
+
+
 ## Analytics Work
+![retailDataAnalytics](assets/Retail_Data_Analytics_ScreenCapture.png)
 
 
 ## Architecture
@@ -37,12 +59,12 @@ Dataset and Notebook
 Dataset and Notebook
 
 ```
-year			integer
-countryname		string
-countrycode		string
-indicatorname		string
-indicatorcode		string
-indicatorvalue		string
+year			
+countryname		
+countrycode		
+indicatorname		
+indicatorcode		
+indicatorvalue		
 ```
 1. Show Historical GDP for Canada
 2. Show GDP for Each Country and Sort By Year
