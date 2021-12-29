@@ -7,7 +7,7 @@ Table of Contents
 
 
 # Introduction
-The purpose of this project is to use Data Analytics and Wrangling with Scala, Spark and Pyspark to evaluate and provide retail data strategies to business and marketing teams alike. The data was provisioned using a Master-Worker Cluster in tandem with Hadoop/ Google Cloud Platform and Azure Databricks/ Pyspark to initialize a zeppelin/ databricks notebook. Technologies include: Scala, Apache Spark, Apache Hadoop Pyspark, Microsoft Azure & Azure Databricks, Google Cloud Platform, Hadoop and Zeppelin.
+The purpose of this project is to use Data Analytics and Wrangling with Scala, Spark and Pyspark to evaluate and provide retail data strategies to business and marketing teams alike. The data was provisioned using a Master-Worker Cluster in tandem with Hadoop/ Google Cloud Platform and Azure Databricks/ Pyspark to initialize a zeppelin/ databricks notebook. Technologies include: Scala, Apache Spark, Apache Hadoop, Pyspark, Microsoft Azure, Azure Databricks, Google Cloud Platform, Hadoop and Zeppelin.
 
 
 # Databricks and Hadoop Implementation
@@ -16,7 +16,7 @@ The purpose of this project is to use Data Analytics and Wrangling with Scala, S
 ## Dataset
 
 Dataset and Notebook
-
+[Dataset](/data/online_retail_II.csv) and [Notebook](/notebook/Retail\ Data\ Analytics.ipynb)
 
 ```
 Invoice
@@ -58,7 +58,8 @@ Microsoft Azure with Azure Databricks was integrated with Azure services to unif
 
 ## Dataset
 
-Dataset and Notebook
+[Notebook](/notebook/WDI\ Data\ Analytics.ipynb)
+
 
 ```
 year			
@@ -78,7 +79,7 @@ indicatorvalue
 
 
 ## Architecture
-This aspect of the project was instantiated from a previously completed #Hadoop Project where; the purpose was to perform data analytics and process big data using Apache Hadoop and other tools such as: HDFS, YARN, Zeppelin, Hive and Spark. This project required the provisioning of a three node Hadoop cluster with GCP Dataproc service. Then a Dataset was prepared from source: Google Public Data (hosted on Google BigQuery). The Dataset was exported via the BigQuery Table to Google Storage. From which GS Data using Hive was created/ queried and Zeppelin was used to execute code. Lastly, integrating GS data to HDFS as text; as well as, continuously improving parsing and performance through the use of OpenCSVSerDe, Partition and Columnar(parquet).
+This aspect of the project was instantiated from a previously completed [Hadoop Project](../hadoop) where; the purpose was to perform data analytics and process big data using Apache Hadoop and other tools such as: HDFS, YARN, Zeppelin, Hive and Spark. This project required the provisioning of a three node Hadoop cluster with GCP Dataproc service. Then a Dataset was prepared from source: Google Public Data (hosted on Google BigQuery). The Dataset was exported via the BigQuery Table to Google Storage. From which GS Data using Hive was created/ queried and Zeppelin was used to execute code. Lastly, integrating GS data to HDFS as text; as well as, continuously improving parsing and performance through the use of OpenCSVSerDe, Partition and Columnar(parquet).
 
 ```
 DROP TABLE IF EXISTS wdi_csv_parquet;
