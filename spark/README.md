@@ -17,6 +17,25 @@ The purpose of this project is to use Data Analytics and Wrangling with Scala, S
 
 Dataset and Notebook
 
+
+## Analytics Work
+
+
+## Architecture
+
+
+
+## Architecture Diagram
+![dataAnalytics](assets/dataAnalytics.png)
+
+
+# Zeppelin and Hadoop Implementation
+
+
+## Dataset
+
+Dataset and Notebook
+
 ```
 year			integer
 countryname		string
@@ -40,24 +59,6 @@ This aspect of the project was instantiated from a previously completed #Hadoop 
 
 ## Architecture Diagram
 ![hadoopDiagram](assets/hadoopDiagram.png)
-
-
-# Zeppelin and Hadoop Implementation
-
-
-## Dataset
-
-Dataset and Notebook
-
-
-## Analytics Work
-
-
-## Architecture
-
-
-## Architecture Diagram
-![dataAnalytics](assets/dataAnalytics.png)
 
 
 # Future Improvement
