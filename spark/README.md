@@ -7,18 +7,60 @@ Table of Contents
 
 
 # Introduction
-- Describe the business context of this project (please do not copy-paste text from the project kick-off ticket)
-- Describe your work and technologies (e.g. dataset, zeppelin, databricks, pyspark, structured APIs, Azure, Hadoop)
+The purpose of this project is to use Data Analytics and Wrangling with Scala, Spark and Pyspark to evaluate and provide retail data strategies to business and marketing teams alike. The data was provisioned using a Master-Worker Cluster in tandem with Hadoop/ Google Cloud Platform and Azure Databricks/ Pyspark to initialize a zeppelin/ databricks notebook. Technologies include: Scala, Apache Spark, Apache Hadoop Pyspark, Microsoft Azure & Azure Databricks, Google Cloud Platform, Hadoop and Zeppelin.
+
 
 # Databricks and Hadoop Implementation
-- Describe the dataset and your analytics work (make sure you create a link to your ipynb)
-- Describe the architecture (e.g. Databricks, DBFS, Azure, Azure storage, Hive Metastore, PySpark, data flow, etc..)
-- Draw an architecture diagram
+
+
+## Dataset
+
+Dataset and Notebook
+
+```
+year			integer
+countryname		string
+countrycode		string
+indicatorname		string
+indicatorcode		string
+indicatorvalue		string
+```
+1. Show Historical GDP for Canada
+2. Show GDP for Each Country and Sort By Year
+3. Find the Highest GDP for Each Country
+
+
+## Analytics Work
+![WDIdataAnalytics](assets/WDI_Data_Analytics.png)
+
+
+## Architecture
+This aspect of the project was instantiated from a previously completed #Hadoop Project where; the purpose was to perform data analytics and process big data using Apache Hadoop and other tools such as: HDFS, YARN, Zeppelin, Hive and Spark. This project required the provisioning of a three node Hadoop cluster with GCP Dataproc service. Then a Dataset was prepared from source: Google Public Data (hosted on Google BigQuery). The Dataset was exported via the BigQuery Table to Google Storage. From which GS Data using Hive was created/ queried and Zeppelin was used to execute code. Lastly, integrating GS data to HDFS as text; as well as, continuously improving parsing and performance through the use of OpenCSVSerDe, Partition and Columnar(parquet).
+
+
+## Architecture Diagram
+![hadoopDiagram](assets/hadoopDiagram.png)
+
 
 # Zeppelin and Hadoop Implementation
-- Describe the dataset and your analytics work (make sure you create a link to your ipynb)
-- Describe the architecture (e.g. Zeppelin, GCP, Hadoop, Hive Metastore, PySpark, data flow, etc..)
-- Draw an architecture diagram
+
+
+## Dataset
+
+Dataset and Notebook
+
+
+## Analytics Work
+
+
+## Architecture
+
+
+## Architecture Diagram
+![dataAnalytics](assets/dataAnalytics.png)
+
 
 # Future Improvement
-- List at least three future improvements for this project
+- hardware 
+- hardware
+- hardware
