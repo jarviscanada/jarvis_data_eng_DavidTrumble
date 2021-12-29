@@ -80,12 +80,19 @@ indicatorvalue
 ## Architecture
 This aspect of the project was instantiated from a previously completed #Hadoop Project where; the purpose was to perform data analytics and process big data using Apache Hadoop and other tools such as: HDFS, YARN, Zeppelin, Hive and Spark. This project required the provisioning of a three node Hadoop cluster with GCP Dataproc service. Then a Dataset was prepared from source: Google Public Data (hosted on Google BigQuery). The Dataset was exported via the BigQuery Table to Google Storage. From which GS Data using Hive was created/ queried and Zeppelin was used to execute code. Lastly, integrating GS data to HDFS as text; as well as, continuously improving parsing and performance through the use of OpenCSVSerDe, Partition and Columnar(parquet).
 
+```
+DROP TABLE IF EXISTS wdi_csv_parquet;
+CREATE EXTERNAL TABLE wdi_csv_parquet
+(year INTEGER, countryName STRING, countryCode STRING, indicatorName STRING, indicatorCode STRING, indicatorValue FLOAT)
+STORED AS PARQUET
+LOCATION 'hdfs:///user/zeppelin/wdi_csv_parquet';
+```
 
 ## Architecture Diagram
 ![hadoopDiagram](assets/hadoopDiagram.png)
 
 
 # Future Improvement
-- hardware 
-- hardware
-- hardware
+- Create sample data and dataframe from a portion of existing data.
+- Create views of analytical queries to lower disk usage.
+- Improve the overall hardware specs of spark cluster.
