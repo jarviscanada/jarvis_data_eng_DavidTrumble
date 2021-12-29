@@ -15,8 +15,7 @@ The purpose of this project is to use Data Analytics and Wrangling with Scala, S
 
 ## Dataset
 
-Dataset and Notebook
-[Dataset](/data/online_retail_II.csv) and [Notebook](/notebook/Retail\ Data\ Analytics.ipynb)
+[Dataset](./data/online_retail_II.csv) and [Notebook](./notebook/Retail%20Data%20Analytics.ipynb)
 
 ```
 Invoice
@@ -58,7 +57,7 @@ Microsoft Azure with Azure Databricks was integrated with Azure services to unif
 
 ## Dataset
 
-[Notebook](/notebook/WDI\ Data\ Analytics.ipynb)
+[Notebook](./notebook/WDI%20Data%20Analytics.ipynb)
 
 
 ```
