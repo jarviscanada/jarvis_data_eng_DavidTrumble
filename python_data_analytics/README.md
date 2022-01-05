@@ -6,9 +6,9 @@ Table of Contents
 
 
 # Introduction
-- Describe the business context of this project
-- Also, describe how LGS would use your analytic result (hint: see kick-off ticket)
-- technologies used Jupyter Notebook, Python libraries, data analytics, data warehouse
+
+
+The purpose of this project is to support London Gift Shop (LGS) through data analytics, which is a UK-based online store that sells gift-ware. The LGS marketing team wants to utilize the latest data technologies to understand their customers better to develop sales and marketing techniques. Upon delivering this proof of concept (POC) project, it will be used by the LGS marketing team to analyze customer shopping behaviour. Technologies used in this project include: Docker, Postgres, Jupyter Notebook, Python libraries and Pandas Dataframe. 
 
 
 # Implementaion
@@ -46,7 +46,9 @@ Country
 
 
 ### Architecture
-- Describe the architecture of this project, including the LGS web app.
+
+
+As per request, the LGS IT team dumped the transaction data between 01/12/2009 and 09/12/2011 into a sql/csv file, which is shared with the Jarvis team. With this, a Docker container was provisioned with Postgres, which was then integrated with Jupyter Notebook to unify this projects analytics workloads. The Retail Data Analytics csv and sql file were used to create a dataframe to analyze the data files and create vizual representations of queried results.
 
 
 ### Architecture Diagram
@@ -64,6 +66,6 @@ Country
 
 
 # Improvements
-- visualization and plotting
-- 
-- try creative and ambitious more analysis metrics and models 
+- Create different visualization and plotting graphs to better represent the data.
+- Use more effective analytics solutions that can produce query results with less lines of code.
+- Try more creative and ambitious analysis, metrics and models. 
