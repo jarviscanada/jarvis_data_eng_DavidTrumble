@@ -51,6 +51,8 @@ Country
 
 ### Architecture Diagram
 
+![pythonArchitecture](./assets/pythonArchitecture.jpg)
+
 
 ## Data Analytics and Wrangling
 
