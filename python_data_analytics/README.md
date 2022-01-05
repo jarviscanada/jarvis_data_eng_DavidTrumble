@@ -60,9 +60,11 @@ As per request, the LGS IT team dumped the transaction data between 01/12/2009 a
 
 [Retail Data Analytics Notebook](./python_data_wrangling/Retail_Data_Analytics.ipynb)
 
+<b>Sales / Sales Growth:</b> The visual representation shows that both sales and sales growth go through a series of peaks and troughs. With this, it is easier to predict when the next peak or trough will be.
 
-- Discuss how would you use the data to help LGS to increase their revenue 
-- (e.g. design a new marketing strategy with data you provided)
+<b>Users:</b> The number of users correspond with the sales and sales growth peaks. To garner more sales peaks, it will be important to commit more efforts to active and new users.
+
+<b>RFM and Segmentation:</b> Through RFM and Segmentation it can provide deep insight as to what interests the highest paying customers. Also, it describes the spending habits of the least impressionable users.
 
 
 # Improvements
