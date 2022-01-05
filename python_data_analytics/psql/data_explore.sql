@@ -43,3 +43,6 @@ FROM retail;
 
 
 -- Q8: Calculate total revenue by YYYYMM 
+SELECT to_char(invoice_date, 'YYYYMM') AS inDate, sum(unit_price*quantity)
+FROM retail
+group by inDate order by inDate ASC
