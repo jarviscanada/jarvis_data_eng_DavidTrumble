@@ -13,7 +13,7 @@ Table of Contents
 
 # Implementaion
 
-### Dataset
+## Dataset
 
 
 [Dataset](./python_data_wrangling/data/online_retail_II.csv)
@@ -66,4 +66,4 @@ Country
 # Improvements
 - visualization and plotting
 - 
-- 
+- try creative and ambitious more analysis metrics and models 
