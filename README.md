@@ -9,7 +9,9 @@ My name is David Trumble; currently an Application Developer at CIBC. Software D
 ## Skills
 
 **Proficient:** Python, C/C++, Java, SQL, Linux/ Shell, JavaScript, HTML, CSS, CDP. 
+
 **Competent:** GCP, Azure, XML, Excel, Apache Services, Docker, Java/ Python/ JS Frameworks.  
+
 **Familiar:** Ansible, AutoSys, R, Arduino, IBM I-series/AS400, PHP.  
 
 
@@ -27,8 +29,11 @@ My name is David Trumble; currently an Application Developer at CIBC. Software D
 ## Education
 
 **Seneca College (2018-2021)**, Diploma, Computer Programming
+
 **Recording Arts Canada (2014-2015)**, Certificate, Audio Engineering
+
 **Seneca College (2012-2013)**, Certificate, General Arts
+
 **Seneca College (2010-2012)**, Business Administration - Marketing
 
 
